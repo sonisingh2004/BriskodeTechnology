@@ -21,13 +21,13 @@ export default function About() {
 // Hero Section
 function HeroSection() {
   return (
-    <section className="relative min-h-[60vh] flex items-center justify-center px-6 py-32 overflow-hidden bg-gradient-to-b from-black/90 to-[#00061A]/95" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed'}}>
+    <section className="relative min-h-[60vh] flex items-center justify-center px-6 py-32 overflow-hidden bg-linear-to-b from-black/90 to-[#00061A]/95" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed'}}>
       {/* Overlay for better text readability */}
       <div className="absolute inset-0 bg-black/60"></div>
       
       {/* Professional background pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(59,130,246,0.3)_1px,transparent_0)] bg-[length:50px_50px]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(59,130,246,0.3)_1px,transparent_0)] bg-size-[50px_50px]"></div>
       </div>
       
       {/* Enhanced animated background elements */}
@@ -100,14 +100,14 @@ function StorySection() {
     <section className="relative py-20 md:py-32 px-6 bg-[#00061A]">
       {/* Professional geometric pattern */}
       <div className="absolute inset-0 opacity-3">
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(59,130,246,0.02)_25%,rgba(59,130,246,0.02)_50%,transparent_50%,transparent_75%,rgba(59,130,246,0.02)_75%)] bg-[length:60px_60px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(59,130,246,0.02)_25%,rgba(59,130,246,0.02)_50%,transparent_50%,transparent_75%,rgba(59,130,246,0.02)_75%)] bg-size-[60px_60px]"></div>
       </div>
       
       {/* Floating geometric shapes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-20 w-32 h-32 border border-blue-500/10 rotate-45 animate-pulse"></div>
         <div className="absolute bottom-40 left-20 w-24 h-24 border border-purple-500/10 rounded-full animate-bounce" style={{ animationDelay: '1.5s' }}></div>
-        <div className="absolute top-1/2 right-10 w-16 h-16 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rotate-12 animate-pulse" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute top-1/2 right-10 w-16 h-16 bg-linear-to-br from-blue-500/5 to-purple-500/5 rotate-12 animate-pulse" style={{ animationDelay: '3s' }}></div>
       </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
@@ -159,7 +159,7 @@ function StorySection() {
                     alt="Team collaboration"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-600/30 to-transparent"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-blue-600/30 to-transparent"></div>
                 </div>
                 <div className="relative h-64 rounded-lg overflow-hidden group mt-8">
                   <img 
@@ -167,7 +167,7 @@ function StorySection() {
                     alt="Modern workspace"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-purple-600/30 to-transparent"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-purple-600/30 to-transparent"></div>
                 </div>
               </div>
             </ScrollAnimationWrapper>
@@ -233,13 +233,13 @@ function MissionVisionSection() {
     <section className="relative py-20 md:py-32 px-6 bg-black">
       {/* Professional circuit-like pattern */}
       <div className="absolute inset-0 opacity-4">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_2px_2px,rgba(59,130,246,0.15)_1px,transparent_0)] bg-[length:40px_40px]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_2px_2px,rgba(59,130,246,0.15)_1px,transparent_0)] bg-size-[40px_40px]"></div>
       </div>
       
       {/* Sophisticated floating elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-16 left-16 w-20 h-20 border-2 border-blue-500/20 rotate-45 animate-pulse"></div>
-        <div className="absolute bottom-24 right-24 w-16 h-16 bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-full animate-bounce" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-24 right-24 w-16 h-16 bg-linear-to-br from-purple-500/10 to-blue-500/10 rounded-full animate-bounce" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/3 right-1/4 w-12 h-12 border border-cyan-500/30 rounded-lg rotate-12 animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
       
@@ -258,7 +258,7 @@ function MissionVisionSection() {
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {/* Mission */}
           <ScrollAnimationWrapper animation="fade-up" delay={100}>
-            <div className="relative p-8 md:p-10 rounded-2xl bg-gradient-to-br from-blue-500/10 to-transparent border border-blue-500/20 group hover:border-blue-500/40 transition-all duration-500 overflow-hidden">
+            <div className="relative p-8 md:p-10 rounded-2xl bg-linear-to-br from-blue-500/10 to-transparent border border-blue-500/20 group hover:border-blue-500/40 transition-all duration-500 overflow-hidden">
               <div className="absolute top-0 right-0 w-40 h-40 bg-blue-500/5 rounded-full blur-3xl group-hover:bg-blue-500/10 transition-all duration-500"></div>
               
               <div className="relative z-10">
@@ -281,7 +281,7 @@ function MissionVisionSection() {
 
           {/* Vision */}
           <ScrollAnimationWrapper animation="fade-up" delay={200}>
-            <div className="relative p-8 md:p-10 rounded-2xl bg-gradient-to-br from-purple-500/10 to-transparent border border-purple-500/20 group hover:border-purple-500/40 transition-all duration-500 overflow-hidden">
+            <div className="relative p-8 md:p-10 rounded-2xl bg-linear-to-br from-purple-500/10 to-transparent border border-purple-500/20 group hover:border-purple-500/40 transition-all duration-500 overflow-hidden">
               <div className="absolute top-0 right-0 w-40 h-40 bg-purple-500/5 rounded-full blur-3xl group-hover:bg-purple-500/10 transition-all duration-500"></div>
               
               <div className="relative z-10">
@@ -347,13 +347,13 @@ function ValuesSection() {
     <section className="relative py-20 md:py-32 px-6 bg-[#00061A]">
       {/* Professional grid pattern */}
       <div className="absolute inset-0 opacity-3">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[length:80px_80px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-size-[80px_80px]"></div>
       </div>
       
       {/* Elegant floating elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-32 left-1/4 w-28 h-28 border border-blue-500/15 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-32 right-1/3 w-20 h-20 bg-gradient-to-br from-purple-500/8 to-cyan-500/8 rotate-45 animate-bounce" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-32 right-1/3 w-20 h-20 bg-linear-to-br from-purple-500/8 to-cyan-500/8 rotate-45 animate-bounce" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/2 right-16 w-14 h-14 border-2 border-cyan-500/20 rounded-lg animate-pulse" style={{ animationDelay: '2.5s' }}></div>
       </div>
       
@@ -420,12 +420,12 @@ function ValueCard({ value, index }) {
     <ScrollAnimationWrapper animation="fade-up" delay={index * 50}>
       <div
         ref={cardRef}
-        className="relative p-8 rounded-2xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-blue-500/30 transition-all duration-500 group cursor-default overflow-hidden"
+        className="relative p-8 rounded-2xl bg-linear-to-br from-white/5 to-transparent border border-white/10 hover:border-blue-500/30 transition-all duration-500 group cursor-default overflow-hidden"
       >
         <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         
         <div className="relative z-10">
-          <div className="value-icon w-14 h-14 mb-6 rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+          <div className="value-icon w-14 h-14 mb-6 rounded-xl bg-linear-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
             <svg className="w-7 h-7 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={value.icon} />
             </svg>
@@ -544,7 +544,7 @@ function TeamMember({ member, index }) {
               alt={member.name}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-blue-600/80 via-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 bg-linear-to-t from-blue-600/80 via-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
         </div>
         
@@ -597,13 +597,13 @@ function WhyChooseUsSection() {
     <section className="relative py-20 md:py-32 px-6 bg-[#00061A]">
       {/* Professional grid pattern */}
       <div className="absolute inset-0 opacity-3">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[length:80px_80px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-size-[80px_80px]"></div>
       </div>
 
       {/* Elegant floating elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-32 left-1/4 w-28 h-28 border border-blue-500/15 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-32 right-1/3 w-20 h-20 bg-gradient-to-br from-purple-500/8 to-cyan-500/8 rotate-45 animate-bounce" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-32 right-1/3 w-20 h-20 bg-linear-to-br from-purple-500/8 to-cyan-500/8 rotate-45 animate-bounce" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/2 right-16 w-14 h-14 border-2 border-cyan-500/20 rounded-lg animate-pulse" style={{ animationDelay: '2.5s' }}></div>
       </div>
 
@@ -670,12 +670,12 @@ function WhyChooseCard({ reason, index }) {
     <ScrollAnimationWrapper animation="fade-up" delay={index * 50}>
       <div
         ref={cardRef}
-        className="relative p-8 rounded-2xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-blue-500/30 transition-all duration-500 group cursor-default overflow-hidden"
+        className="relative p-8 rounded-2xl bg-linear-to-br from-white/5 to-transparent border border-white/10 hover:border-blue-500/30 transition-all duration-500 group cursor-default overflow-hidden"
       >
         <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
         <div className="relative z-10">
-          <div className="reason-icon w-14 h-14 mb-6 rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+          <div className="reason-icon w-14 h-14 mb-6 rounded-xl bg-linear-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
             <svg className="w-7 h-7 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={reason.icon} />
             </svg>
@@ -696,10 +696,10 @@ function WhyChooseCard({ reason, index }) {
 // CTA Section
 function CTASection() {
   return (
-    <section className="relative py-20 md:py-32 px-6 bg-gradient-to-b from-black to-[#00061A] overflow-hidden">
+    <section className="relative py-20 md:py-32 px-6 bg-linear-to-b from-black to-[#00061A] overflow-hidden">
       {/* Professional mesh pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_3px_3px,rgba(59,130,246,0.2)_2px,transparent_0)] bg-[length:70px_70px]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_3px_3px,rgba(59,130,246,0.2)_2px,transparent_0)] bg-size-[70px_70px]"></div>
       </div>
       
       {/* Enhanced background effects */}
@@ -728,7 +728,7 @@ function CTASection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
+              className="px-8 py-4 bg-linear-to-r from-blue-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
             >
               Get Started Today
             </a>

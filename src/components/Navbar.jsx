@@ -5,13 +5,13 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="absolute top-0 left-0 w-full z-[100]">
-      <nav className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-5">
+    <header className="absolute top-0 left-0 w-full z-100 pointer-events-none">
+      <nav className="max-w-7xl mx-auto px-4 md:px-16 lg:px-20 py-4 md:py-5 pointer-events-auto">
 
-        <div className="flex items-center justify-between translate-x-1 md:translate-x-10 translate-y-5">
+        <div className="flex items-center justify-between md:translate-x-10">
           
           {/* Logo */}
-          <div className="text-white text-xl font-bold tracking-wide">
+          <div className="text-white text-xl font-bold tracking-wide pointer-events-auto">
             <Link to="/">
               <img src='/assets/logo.png' alt="Briskode Logo" className="h-8 md:h-10"/>
             </Link>
@@ -45,7 +45,7 @@ export default function Navbar() {
           {/* Hamburger Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-white p-2 hover:bg-white/10 rounded transition-colors relative z-[110]"
+            className="md:hidden text-white p-2 hover:bg-white/10 rounded transition-colors pointer-events-auto fixed right-4 z-110"
             aria-label="Toggle menu"
           >
             <svg
@@ -76,7 +76,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 bg-black/90 backdrop-blur-md rounded-lg p-6 animate-fadeIn">
+          <div className="md:hidden mt-4 bg-black/90 backdrop-blur-md rounded-lg p-6 animate-fadeIn relative z-105">
             <ul className="flex flex-col gap-4 text-white/90 text-base font-medium">
               <li className="hover:text-white transition-colors cursor-pointer py-2 border-b border-white/10">
                 <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>

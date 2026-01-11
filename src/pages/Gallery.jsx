@@ -221,7 +221,7 @@ function GalleryItem({ image, index, onClick }) {
         />
         
         {/* Overlay */}
-        <div className="gallery-overlay absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-0 flex flex-col justify-end p-6 transition-opacity duration-300">
+        <div className="gallery-overlay absolute inset-0 bg-linear-to-t from-black via-black/60 to-transparent opacity-0 flex flex-col justify-end p-6 transition-opacity duration-300">
           <span className="text-xs text-blue-400 font-semibold uppercase tracking-wider mb-2">
             {image.category}
           </span>
@@ -425,12 +425,12 @@ function CultureCard({ culture, index }) {
     <ScrollAnimationWrapper animation="fade-up" delay={index * 50}>
       <div
         ref={cardRef}
-        className="relative p-8 rounded-2xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-blue-500/30 transition-all duration-500 group cursor-default overflow-hidden"
+        className="relative p-8 rounded-2xl bg-linear-to-br from-white/5 to-transparent border border-white/10 hover:border-blue-500/30 transition-all duration-500 group cursor-default overflow-hidden"
       >
         <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         
         <div className="relative z-10">
-          <div className="culture-icon w-14 h-14 mb-6 rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+          <div className="culture-icon w-14 h-14 mb-6 rounded-xl bg-linear-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
             <svg className="w-7 h-7 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={culture.icon} />
             </svg>

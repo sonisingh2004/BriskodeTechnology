@@ -44,16 +44,16 @@ export default function HomeServices() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 px-6 overflow-hidden bg-gradient-to-b from-slate-950 to-black">
+    <section className="relative py-20 md:py-32 px-6 overflow-hidden bg-linesr-to-b from-slate-950 to-black">
       {/* Professional grid pattern */}
       <div className="absolute inset-0 opacity-3">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[length:80px_80px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-size-[80px_80px]"></div>
       </div>
       
       {/* Elegant floating elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-32 left-1/4 w-28 h-28 border border-blue-500/15 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-32 right-1/3 w-20 h-20 bg-gradient-to-br from-purple-500/8 to-cyan-500/8 rotate-45 animate-bounce" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-32 right-1/3 w-20 h-20 bg-linear-to-br from-purple-500/8 to-cyan-500/8 rotate-45 animate-bounce" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/2 right-16 w-14 h-14 border-2 border-cyan-500/20 rounded-lg animate-pulse" style={{ animationDelay: '2.5s' }}></div>
       </div>
       

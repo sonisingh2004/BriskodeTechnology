@@ -78,15 +78,12 @@ export default function Clients() {
 
         {/* Clients Slider */}
         <div className="relative">
-          {/* Gradient Overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
           
           {/* Scrolling Container */}
           <div className="overflow-hidden">
             <div className="flex animate-scroll-left hover:pause-animation">
               {duplicatedClients.map((client, index) => (
-                <div key={`${client.name}-${index}`} className="flex-shrink-0 px-4">
+                <div key={`${client.name}-${index}`} className="shrink-0 px-4">
                   <ClientCard client={client} />
                 </div>
               ))}
@@ -107,7 +104,7 @@ export default function Clients() {
         }
 
         .animate-scroll-left {
-          animation: scroll-left 30s linear infinite;
+          animation: scroll-left 8s linear infinite;
         }
 
         .pause-animation:hover {
