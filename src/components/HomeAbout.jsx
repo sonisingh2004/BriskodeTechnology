@@ -13,25 +13,25 @@ export default function HomeAbout() {
 
   const images = [
     {
-      url: '/public/assets/gallery/img1.jpeg',
+      url: '/assets/gallery/img1.jpeg',
       alt: 'Team collaboration at Briskode',  
       gradient: 'from-blue-600/60 via-blue-600/20',
       span: ''
     },
     {
-      url: '/public/assets/gallery/img2.jpeg',
+      url: '/assets/gallery/img2.jpeg',
       alt: 'Modern workspace at Briskode', 
       gradient: 'from-purple-600/60 via-purple-600/20',
       span: ''
     },
     {
-      url: '/public/assets/gallery/img3.jpeg',
+      url: '/assets/gallery/img3.jpeg',
       alt: 'Innovation at Briskode',   
       gradient: 'from-cyan-600/60 via-cyan-600/20',
       span: ''
     },
     {
-      url: '/public/assets/gallery/img4.jpeg',
+      url: '/assets/gallery/img4.jpeg',
       alt: 'Creative workspace at Briskode',  
       gradient: 'from-pink-600/60 via-pink-600/20',
       span: ''

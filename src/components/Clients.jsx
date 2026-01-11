@@ -4,53 +4,53 @@ import ScrollAnimationWrapper from './ScrollAnimationWrapper';
 export default function Clients() {
   const clients = [
     {
-      logo: "/public/assets/advocate.jpg",
+      logo: "/assets/advocate.jpg",
     },
     {
     
-      logo: "/public/assets/archify & buildify.png",
+      logo: "/assets/archify & buildify.png",
     },
     {
       
-      logo: "/public/assets/asish enterprises.jpg",
+      logo: "/assets/asish enterprises.jpg",
     },
     {
-      logo: "/public/assets/Easysol Tech.png",
+      logo: "/assets/Easysol Tech.png",
     },
     {
-      logo: "/public/assets/EiVi.png",
+      logo: "/assets/EiVi.png",
     },
     {
-      logo: "/public/assets/farm enterprise.png",
+      logo: "/assets/farm enterprise.png",
     },
     {
     
-      logo: "/public/assets/ganjam nac.jpeg",
+      logo: "/assets/ganjam nac.jpeg",
     },
     {
       
-      logo: "/public/assets/gopalpur nac.jpg",
+      logo: "/assets/gopalpur nac.jpg",
     },
     {
-      logo:"/public/assets/jjkm.jpeg"
+      logo:"/assets/jjkm.jpeg"
     },
     {
-      logo:"/public/assets/mudra sathi.png"
+      logo:"/assets/mudra sathi.png"
     },
     {
-      logo:"/public/assets/nexgenfx.png"
+      logo:"/assets/nexgenfx.png"
     },
     {
-      logo:"/public/assets/odisha govt.jpeg"
+      logo:"/assets/odisha govt.jpeg"
     },
     {
-      logo:"/public/assets/sj classes.png"
+      logo:"/assets/sj classes.png"
     },
     {
-      logo:"/public/assets/trupti motors.jpg"
+      logo:"/assets/trupti motors.jpg"
     },
     {
-      logo:"/public/assets/trupti trucknbus.png"
+      logo:"/assets/trupti trucknbus.png"
     }
   ];
 

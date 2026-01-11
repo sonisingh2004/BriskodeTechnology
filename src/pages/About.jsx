@@ -155,7 +155,7 @@ function StorySection() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative h-64 rounded-lg overflow-hidden group">
                   <img 
-                    src="/public/assets/gallery/img1.jpeg" 
+                    src="/assets/gallery/img1.jpeg" 
                     alt="Team collaboration"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
@@ -163,7 +163,7 @@ function StorySection() {
                 </div>
                 <div className="relative h-64 rounded-lg overflow-hidden group mt-8">
                   <img 
-                    src="/public/assets/gallery/img2.jpeg" 
+                    src="/assets/gallery/img2.jpeg" 
                     alt="Modern workspace"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
@@ -449,22 +449,22 @@ function TeamSection() {
     {
       name: "Biswajit Matia",
       role: "CEO",
-      image: "/public/assets/ceo.jpg",
+      image: "/assets/ceo.jpg",
     },
     {
       name: "Mayuresh Mohanty",
       role: "Director",
-      image: "/public/assets/director.jpg",
+      image: "/assets/director.jpg",
     },
     {
       name: "Prajukta Mahakud",
       role: "HR",
-      image: "/public/assets/hr.jpg",
+      image: "/assets/hr.jpg",
     },
     {
       name: "Sameer Kumar Sahu",
       role: "Frontend Developer",
-      image: "/public/assets/fd.jpeg",
+      image: "/assets/fd.jpeg",
     }
   ];
 
