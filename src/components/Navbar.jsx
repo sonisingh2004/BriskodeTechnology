@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="absolute top-0 left-0 w-full z-100 pointer-events-none">
-      <nav className="max-w-7xl mx-auto px-4 md:px-16 lg:px-20 py-4 md:py-5 pointer-events-auto">
+    <header className=" top-0 left-0 w-full z-100 pointer-events-none sticky  ">
+      <nav className="max-w-7xl mx-auto px-4 md:px-16 lg:px-20 py-4 md:py-5 pointer-events-auto ">
 
         <div className="flex items-center justify-between md:translate-x-10">
           
@@ -18,29 +18,37 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center gap-8 text-white/90 text-sm font-medium">
-            <li className="hover:text-white transition-colors cursor-pointer">
-              <Link to="/">Home</Link>
-            </li>
-            <li className="hover:text-white transition-colors cursor-pointer">
-              <Link to="/about">About</Link>
-            </li>
-            <li className="hover:text-white transition-colors cursor-pointer">
-              <Link to="/services">Services</Link>
-            </li>
-            <li className="hover:text-white transition-colors cursor-pointer">
-              <Link to="/gallery">Gallery</Link>
-            </li>
-            <li className="hover:text-white transition-colors cursor-pointer">
-              <Link to="/portfolio">Portfolio</Link>
-            </li>
-            <li className="hover:text-white transition-colors cursor-pointer">
-              <Link to="/internship">Internship</Link>
-            </li>
-            <li className="hover:text-white transition-colors cursor-pointer">
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
+          <ul className="hidden md:flex items-center gap-8 text-white/80 text-sm font-medium">
+  {[
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Portfolio", path: "/portfolio" },
+    { name: "Internship", path: "/internship" },
+    { name: "Contact", path: "/contact" },
+  ].map((item) => (
+    <li key={item.name}>
+      <NavLink
+  to={item.path}
+  className={({ isActive }) =>
+    `relative transition-colors duration-300
+     ${
+       isActive
+         ? "text-blue-500 after:w-full"
+         : "hover:text-white after:w-0"
+     }
+     after:absolute after:-bottom-1 after:left-0 after:h-[2px]
+     after:bg-blue-500 after:transition-all after:duration-300`
+  }
+>
+  {item.name}
+</NavLink>
+
+    </li>
+  ))}
+</ul>
+
 
           {/* Hamburger Button */}
           <button

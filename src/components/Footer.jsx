@@ -1,14 +1,22 @@
+import { Link } from "react-router-dom";
+import { FaXTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa6";
+
 export default function Footer() {
   return (
-    <footer className="relative px-6 py-20 border-t border-white/10 overflow-hidden">
+    <footer className="relative px-6 py-20 border-t border-white/10 overflow-hidden bg-[#010a24]">
       {/* Background gradient */}
       <div className="absolute inset-0 gradient-radial opacity-20"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
+
           {/* Brand */}
           <div>
-            <img src="/assets/logo.png" alt="Briskode Technology" className="h-12 mb-4" />
+            <img
+              src="/assets/logo.png"
+              alt="Briskode Technology"
+              className="h-12 mb-4"
+            />
             <p className="text-gray-400 leading-relaxed mb-4">
               Building high-impact digital experiences for modern brands.
             </p>
@@ -23,10 +31,26 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
-              <li><a href="#work" className="hover:text-white transition-colors">Work</a></li>
-              <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
+              <li>
+                <Link to="/services" className="hover:text-white transition-colors">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/portfolio" className="hover:text-white transition-colors">
+                  Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="hover:text-white transition-colors">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-white transition-colors">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -49,14 +73,51 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-gray-400 text-sm">
             © 2026 Briskode Technology Pvt. Ltd. All rights reserved.
           </p>
-          <div className="flex gap-6">
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">Twitter</a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">GitHub</a>
+
+          {/* Social Icons */}
+          <div className="flex gap-5">
+            <Link
+              to={{ pathname: "https://twitter.com" }}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Twitter"
+              className="w-10 h-10 flex items-center justify-center rounded-lg
+              border border-white/10 text-gray-400
+              hover:text-white hover:border-blue-500/40
+              hover:bg-blue-500/10 transition-all duration-300"
+            >
+              <FaXTwitter className="text-lg" />
+            </Link>
+
+            <Link
+              to={{ pathname: "https://www.linkedin.com" }}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              className="w-10 h-10 flex items-center justify-center rounded-lg
+              border border-white/10 text-gray-400
+              hover:text-white hover:border-blue-500/40
+              hover:bg-blue-500/10 transition-all duration-300"
+            >
+              <FaLinkedinIn className="text-lg" />
+            </Link>
+
+            <Link
+              to={{ pathname: "https://github.com" }}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              className="w-10 h-10 flex items-center justify-center rounded-lg
+              border border-white/10 text-gray-400
+              hover:text-white hover:border-blue-500/40
+              hover:bg-blue-500/10 transition-all duration-300"
+            >
+              <FaGithub className="text-lg" />
+            </Link>
           </div>
         </div>
       </div>
