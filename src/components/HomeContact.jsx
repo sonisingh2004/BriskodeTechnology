@@ -92,16 +92,13 @@ export default function HomeContact() {
               <div className="mt-12 pt-8 border-t border-zinc-800">
                 <h4 className="text-white font-semibold mb-4">Follow Us</h4>
                 <div className="flex gap-4">
-                  <SocialIcon to="https://www.linkedin.com/company/flyingdata-technology/posts/?feedView=all">
+                  <SocialIcon to="https://www.linkedin.com/company/flyingdata-technology/posts/">
                     <FaLinkedinIn />
                   </SocialIcon>
-                  <SocialIcon to="https://twitter.com">
-                    <FaXTwitter />
-                  </SocialIcon>
-                  <SocialIcon to="https://facebook.com">
+                  <SocialIcon to="https://www.facebook.com/briskodetechnologypvtltd">
                     <FaFacebookF />
                   </SocialIcon>
-                  <SocialIcon to="https://instagram.com">
+                  <SocialIcon to="https://www.instagram.com/briskode_technology_pvtltd/">
                     <FaInstagram />
                   </SocialIcon>
                 </div>

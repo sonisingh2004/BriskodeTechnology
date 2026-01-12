@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import FloatingWhatsApp from '../components/FloatingWhatsApp'
 
 export default function MainLayout() {
   return (
@@ -8,6 +9,7 @@ export default function MainLayout() {
       <Navbar />
       <main className="flex-1">
         <Outlet />
+        <FloatingWhatsApp/>
       </main>
       <Footer />
     </div>

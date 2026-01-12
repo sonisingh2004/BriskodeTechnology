@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -81,16 +81,16 @@ export default function Footer() {
           {/* Social Icons */}
           <div className="flex gap-5">
             <Link
-              to={{ pathname: "https://twitter.com" }}
+              to={{ pathname: "https://www.facebook.com/briskodetechnologypvtltd" }}
               target="_blank"
               rel="noreferrer"
-              aria-label="Twitter"
+              aria-label="facebook"
               className="w-10 h-10 flex items-center justify-center rounded-lg
               border border-white/10 text-gray-400
               hover:text-white hover:border-blue-500/40
               hover:bg-blue-500/10 transition-all duration-300"
             >
-              <FaXTwitter className="text-lg" />
+              <FaFacebook className="text-lg" />
             </Link>
 
             <Link
@@ -107,16 +107,16 @@ export default function Footer() {
             </Link>
 
             <Link
-              to={{ pathname: "https://github.com" }}
+              to={{ pathname: "https://www.instagram.com/briskode_technology_pvtltd/" }}
               target="_blank"
               rel="noreferrer"
-              aria-label="GitHub"
+              aria-label="INSTAGRAM"
               className="w-10 h-10 flex items-center justify-center rounded-lg
               border border-white/10 text-gray-400
               hover:text-white hover:border-blue-500/40
               hover:bg-blue-500/10 transition-all duration-300"
             >
-              <FaGithub className="text-lg" />
+              <FaInstagram className="text-lg"/>
             </Link>
           </div>
         </div>
