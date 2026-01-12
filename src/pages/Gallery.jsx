@@ -114,6 +114,30 @@ function GallerySection() {
       id: 8,
       url: '/assets/gallery/img9.jpeg',
     },
+    {
+      id: 9,
+      url: '/assets/gallery/img10.jpeg',
+    },
+    {
+      id: 10,
+      url: '/assets/gallery/img11.jpeg',
+    },
+    {
+      id: 11,
+      url: '/assets/gallery/img12.jpeg',
+    },
+    {
+      id: 12,
+      url: '/assets/gallery/img13.jpeg',
+    },
+    {
+      id: 13,
+      url: '/assets/gallery/img14.jpeg',
+    },
+    {
+      id: 14,
+      url: '/assets/gallery/img15.jpeg',
+    },
   ];
 
   return (

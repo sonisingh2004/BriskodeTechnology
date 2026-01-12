@@ -72,6 +72,29 @@ function StorySection() {
     { value: 15, label: 'Team Members', suffix: '' }
   ];
 
+  const storyImages = [
+    {
+      src: "/assets/gallery/img10.jpeg",
+      alt: "Team collaboration",
+      marginTop: true
+    },
+    {
+      src: "/assets/gallery/img11.jpeg",
+      alt: "Modern workspace",
+      marginTop: true
+    },
+    {
+      src: "/assets/gallery/img15.jpeg",
+      alt: "Modern workspace",
+      marginTop: true
+    },
+    {
+      src: "/assets/gallery/img13.jpeg",
+      alt: "Modern workspace",
+      marginTop: true
+    }
+  ];
+
   const [statsAnimated, setStatsAnimated] = useState(false);
   const statsRef = useRef(null);
 
@@ -153,22 +176,19 @@ function StorySection() {
           <div className="relative">
             <ScrollAnimationWrapper animation="fade-up" delay={300}>
               <div className="grid grid-cols-2 gap-4">
-                <div className="relative h-64 rounded-lg overflow-hidden group">
-                  <img 
-                    src="/assets/gallery/img1.jpeg" 
-                    alt="Team collaboration"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-blue-600/30 to-transparent"></div>
-                </div>
-                <div className="relative h-64 rounded-lg overflow-hidden group mt-8">
-                  <img 
-                    src="/assets/gallery/img2.jpeg" 
-                    alt="Modern workspace"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-purple-600/30 to-transparent"></div>
-                </div>
+                {storyImages.map((image, index) => (
+                  <div 
+                    key={index}
+                    className={`relative h-64 rounded-lg overflow-hidden group ${image.marginTop ? 'mt-8' : ''}`}
+                  >
+                    <img 
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                
+                  </div>
+                ))}
               </div>
             </ScrollAnimationWrapper>
           </div>

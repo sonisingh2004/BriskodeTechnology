@@ -1,5 +1,5 @@
+import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { FaXTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -94,7 +94,7 @@ export default function Footer() {
             </Link>
 
             <Link
-              to={{ pathname: "https://www.linkedin.com" }}
+              to={{ pathname: "https://www.linkedin.com/company/flyingdata-technology/posts/" }}
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"

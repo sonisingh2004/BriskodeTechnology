@@ -83,7 +83,7 @@ export default function Clients() {
           <div className="overflow-hidden">
             <div className="flex animate-scroll-left hover:pause-animation">
               {duplicatedClients.map((client, index) => (
-                <div key={`${client.name}-${index}`} className="shrink-0 px-4">
+                <div key={`${client.name}-${index}`} className="shrink-0 px-2 md:px-4">
                   <ClientCard client={client} />
                 </div>
               ))}
@@ -117,10 +117,10 @@ export default function Clients() {
 
 function ClientCard({ client }) {
   return (
-    <div className="group relative bg-zinc-900/30 border border-zinc-800 rounded-xl p-6 hover:bg-zinc-900/50 hover:border-zinc-700 transition-all duration-300 cursor-pointer w-64">
+    <div className="group relative bg-zinc-900/30 border border-zinc-800 rounded-lg md:rounded-xl p-3 md:p-6 hover:bg-zinc-900/50 hover:border-zinc-700 transition-all duration-300 cursor-pointer w-32 sm:w-48 md:w-64">
       {/* Logo */}
-      <div className="mb-4 flex items-center justify-center">
-        <div className="w-32 h-32 rounded-lg bg-zinc-800/50 border border-zinc-700/50 flex items-center justify-center overflow-hidden group-hover:bg-zinc-800 group-hover:border-blue-500/30 transition-all duration-300">
+      <div className="mb-2 md:mb-4 flex items-center justify-center">
+        <div className="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-lg bg-zinc-800/50 border border-zinc-700/50 flex items-center justify-center overflow-hidden group-hover:bg-zinc-800 group-hover:border-blue-500/30 transition-all duration-300">
           <img 
             src={client.logo} 
             alt={`${client.name} logo`}
