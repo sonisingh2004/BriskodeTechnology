@@ -5,8 +5,8 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className=" top-0 left-0 w-full z-100 pointer-events-none sticky  ">
-      <nav className="max-w-7xl mx-auto px-4 md:px-16 lg:px-20 py-4 md:py-5 pointer-events-auto ">
+    <header className="fixed top-0 left-0 w-full z-100 pointer-events-none bg-[#010a2460]">
+      <nav className="max-w-7xl mx-auto px-4 md:px-16 lg:px-20 py-4 md:py-5 pointer-events-auto">
 
         <div className="flex items-center justify-between md:translate-x-10">
           
@@ -38,7 +38,7 @@ export default function Navbar() {
          ? "text-blue-500 after:w-full"
          : "hover:text-white after:w-0"
      }
-     after:absolute after:-bottom-1 after:left-0 after:h-[2px]
+     after:absolute after:-bottom-1 after:left-0 after:h-0.5
      after:bg-blue-500 after:transition-all after:duration-300`
   }
 >
