@@ -7,7 +7,7 @@ export default function HomeAbout() {
   const stats = [
     { value: 50, label: 'Projects', suffix: '+' },
     { value: 100, label: 'Happy Clients', suffix: '+' },
-    { value: 5, label: 'Years Experience', suffix: '+' },
+    { value: 2, label: 'Years Experience', suffix: '+' },
     { value: 10, label: 'Awards', suffix: '+' }
   ];
 

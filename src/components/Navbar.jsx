@@ -5,10 +5,10 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-100 pointer-events-none bg-[#010a2460]">
-      <nav className="max-w-7xl mx-auto px-4 md:px-16 lg:px-20 py-4 md:py-5 pointer-events-auto">
+    <header className="fixed left-0 w-full z-90 pointer-events-none bg-[#010a2460]">
+      <nav className="max-w-7xl mx-auto px-4 md:px-10 lg:px-10 py-4 md:py-5 pointer-events-auto ">
 
-        <div className="flex items-center justify-between md:translate-x-10">
+        <div className="flex items-center justify-between">
           
           {/* Logo */}
           <div className="text-white text-xl font-bold tracking-wide pointer-events-auto">

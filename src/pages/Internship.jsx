@@ -65,7 +65,7 @@ const Internship = () => {
               <InternshipCard
                 title="Web Developer Internship"
                 duration="3 Months"
-                fee="₹5,000 + ₹1,000 Reg Fee"
+                fee="₹6,000 + ₹1,000 Reg Fee"
                 skills={[
                   "HTML",
                   "CSS",
@@ -77,8 +77,8 @@ const Internship = () => {
 
               <InternshipCard
                 title="Full Stack Developer Internship"
-                duration="4–6 Months"
-                fee="₹9,000 + ₹1,000 Reg Fee"
+                duration="6 Months"
+                fee="₹12,000 + ₹1,000 Reg Fee"
                 skills={[
                   "React",
                   "Node.js",
@@ -93,13 +93,13 @@ const Internship = () => {
             <div className="mt-28 grid gap-10 md:grid-cols-2">
               <PricingCard
                 title="Web Developer Internship"
-                price="₹5,000"
+                price="₹6,000"
                 duration="3 Months"
               />
               <PricingCard
                 title="Full Stack Internship"
-                price="₹9,000"
-                duration="4–6 Months"
+                price="₹12,000"
+                duration="6 Months"
               />
             </div>
 

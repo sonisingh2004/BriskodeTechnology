@@ -38,6 +38,34 @@
   }
 }
 
+/* Sticky Banner Wave Animation */
+@keyframes wave {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-15deg);
+  }
+
+  75% {
+    transform: rotate(15deg);
+  }
+}
+
+.animate-wave {
+  display: inline-block;
+  animation: wave 2s ease-in-out infinite;
+}
+
+.animate-wave-delayed {
+  display: inline-block;
+  animation: wave 2s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
 
 html {
   scroll-behavior: smooth;
@@ -164,4 +192,79 @@ body {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+/* Client slider animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 8s linear infinite;
+}
+
+.pause-animation:hover {
+  animation-play-state: paused;
+}
+
+/* Indian Flag in Hand Animations */
+@keyframes flagSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-120%) translateY(50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes flagSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(120%) translateY(50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes flagWave {
+
+  0%,
+  100% {
+    transform: translateY(0) rotateZ(0deg);
+  }
+
+  25% {
+    transform: translateY(-3px) rotateZ(2deg);
+  }
+
+  75% {
+    transform: translateY(3px) rotateZ(-2deg);
+  }
+}
+
+.animate-flag-left {
+  opacity: 0;
+  animation: flagSlideLeft 1.2s ease-out forwards;
+}
+
+.animate-flag-right {
+  opacity: 0;
+  animation: flagSlideRight 1.2s ease-out forwards;
+}
+
+.animate-flag-wave {
+  animation: flagWave 3s ease-in-out infinite;
+  transform-origin: left center;
 }
