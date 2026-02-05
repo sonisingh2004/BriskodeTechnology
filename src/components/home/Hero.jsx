@@ -38,46 +38,6 @@ export default function Hero() {
         </video>
         <div className="absolute inset-0 bg-black/45 z-5" />
       </div>
-     
-     
-
-      {/* � VIDEO BANNER – TOP center */}
-      <div
-        className="absolute left-1/2 -translate-x-1/2
-                   top-14 md:top-18
-                   z-95 opacity-0 animate-para"
-        style={{ animationDelay: "1.2s" }}
-      >
-        <div className="relative group">
-          {/* Banner Label */}
-          <div className="absolute -top-1.5 left-3 z-10
-                         bg-linear-to-r from-orange-500 via-white to-green-600 
-                         px-2.5 py-0.5 rounded-full shadow-md">
-            <span className="text-gray-900 text-[10px] font-bold tracking-wider">
-              Celebrating
-            </span>
-          </div>
-          
-          {/* Banner Video */}
-          <div className="w-70 sm:w-[320px] md:w-90 h-17.5 sm:h-20
-                         rounded-lg shadow-2xl overflow-hidden
-                         bg-linear-to-r from-orange-500/10 via-white/5 to-green-500/10
-                         backdrop-blur-md border-2 border-green-500/30
-                         group-hover:border-green-500/50 transition-all duration-300
-                         group-hover:shadow-green-500/30">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              className="w-full h-full object-cover"
-            >
-              <source src="/assets/video/republicDay.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
-      </div>
 
       {/* ================= CONTENT ================= */}
       <div className="relative z-20 h-full flex items-center">
