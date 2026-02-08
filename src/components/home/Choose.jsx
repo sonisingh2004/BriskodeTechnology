@@ -38,18 +38,18 @@ export default function Choose() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 px-6 overflow-hidden  bg-black">
+    <section className="relative py-20 md:py-32 px-6 overflow-hidden bg-linear-to-b from-blue-50 to-white">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <ScrollAnimationWrapper animation="fade-up">
           <div className="text-center mb-16 md:mb-20">
-            <p className="text-blue-500 text-xs md:text-sm font-semibold tracking-[0.2em] uppercase mb-4">
+            <p className="text-blue-600 text-xs md:text-sm font-bold tracking-[0.2em] uppercase mb-4">
               WHY CHOOSE US
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
               Your Success is Our Priority
             </h2>
-            <p className="text-gray-400 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+            <p className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
               We combine technical excellence, industry expertise, and unwavering commitment 
               to deliver solutions that drive real business results.
             </p>
@@ -100,15 +100,15 @@ function ReasonCard({ reason }) {
   return (
     <div
       ref={cardRef}
-      className="relative bg-zinc-900/30 border border-zinc-800 rounded-xl p-8 hover:bg-zinc-900/50 hover:border-zinc-700 transition-all duration-300 group"
+      className="relative glass-card rounded-xl p-8 hover-lift transition-all duration-300 group border border-blue-100"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       {/* Icon */}
       <div ref={iconRef} className="mb-6">
-        <div className="w-12 h-12 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center group-hover:bg-blue-500/20 group-hover:border-blue-500/40 transition-all duration-300">
+        <div className="w-12 h-12 rounded-lg bg-blue-100 border border-blue-200 flex items-center justify-center group-hover:bg-blue-200 group-hover:border-blue-300 transition-all duration-300 hover-scale">
           <svg 
-            className="w-6 h-6 text-blue-500" 
+            className="w-6 h-6 text-blue-600" 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
@@ -124,12 +124,12 @@ function ReasonCard({ reason }) {
       </div>
 
       {/* Title */}
-      <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-blue-400 transition-colors">
+      <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">
         {reason.title}
       </h3>
 
       {/* Description */}
-      <p className="text-gray-500 text-sm leading-relaxed">
+      <p className="text-gray-600 text-sm leading-relaxed">
         {reason.description}
       </p>
 

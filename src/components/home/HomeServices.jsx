@@ -44,30 +44,30 @@ export default function HomeServices() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 px-6 overflow-hidden bg-linesr-to-b from-slate-950 to-black">
+    <section className="relative py-20 md:py-32 px-6 overflow-hidden bg-linear-to-b from-blue-50 to-white">
       {/* Professional grid pattern */}
-      <div className="absolute inset-0 opacity-3">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-size-[80px_80px]"></div>
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-size-[80px_80px]"></div>
       </div>
       
       {/* Elegant floating elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-32 left-1/4 w-28 h-28 border border-blue-500/15 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-32 right-1/3 w-20 h-20 bg-linear-to-br from-purple-500/8 to-cyan-500/8 rotate-45 animate-bounce" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 right-16 w-14 h-14 border-2 border-cyan-500/20 rounded-lg animate-pulse" style={{ animationDelay: '2.5s' }}></div>
+        <div className="absolute top-32 left-1/4 w-28 h-28 border border-blue-300/30 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-32 right-1/3 w-20 h-20 bg-linear-to-br from-blue-200/20 to-cyan-200/20 rotate-45 animate-float"></div>
+        <div className="absolute top-1/2 right-16 w-14 h-14 border-2 border-cyan-300/30 rounded-lg animate-pulse" style={{ animationDelay: '2.5s' }}></div>
       </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <ScrollAnimationWrapper animation="fade-up">
           <div className="text-center mb-16 md:mb-20">
-            <p className="text-blue-500 text-xs md:text-xl font-semibold tracking-[0.2em] uppercase mb-4">
+            <p className="text-blue-600 text-xs md:text-xl font-bold tracking-[0.2em] uppercase mb-4">
               |OUR SERVICES
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
               Comprehensive IT Solutions
             </h2>
-            <p className="text-gray-400 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+            <p className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
               From strategy to implementation, we deliver end-to-end technology services 
               that transform businesses and drive measurable results.
             </p>
@@ -136,7 +136,7 @@ function ServiceCard({ service }) {
   return (
     <div
       ref={cardRef}
-      className="relative bg-slate-900/80 backdrop-blur-sm border border-slate-700/50 rounded-lg p-8 group cursor-pointer transition-all duration-300 hover:bg-slate-800/90 hover:border-slate-600"
+      className="relative glass-card rounded-xl p-8 group cursor-pointer transition-all duration-300 hover-lift border border-blue-100"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -146,7 +146,7 @@ function ServiceCard({ service }) {
         className="mb-6"
       >
         <svg 
-          className="w-10 h-10 text-gray-400 group-hover:text-blue-500 transition-colors duration-300" 
+          className="w-10 h-10 text-blue-500 group-hover:text-blue-600 transition-colors duration-300" 
           fill="none" 
           stroke="currentColor" 
           viewBox="0 0 24 24"
@@ -161,12 +161,12 @@ function ServiceCard({ service }) {
       </div>
 
       {/* Title */}
-      <h3 className="text-xl font-semibold mb-3 text-white">
+      <h3 className="text-xl font-bold mb-3 text-gray-900">
         {service.title}
       </h3>
 
       {/* Description */}
-      <p className="text-gray-500 text-sm leading-relaxed mb-6">
+      <p className="text-gray-600 text-sm leading-relaxed mb-6">
         {service.description}
       </p>
 
@@ -175,7 +175,7 @@ function ServiceCard({ service }) {
         {service.features.map((feature, idx) => (
           <div 
             key={idx} 
-            className="flex items-center text-xs text-gray-600"
+            className="flex items-center text-xs text-gray-700 font-medium"
           >
             <div className="w-1 h-1 rounded-full bg-blue-500 mr-2"></div>
             <span>{feature}</span>

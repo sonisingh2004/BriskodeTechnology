@@ -41,18 +41,18 @@ export default function HomeContact() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 px-6 bg-[#010a24]">
+    <section className="relative py-20 md:py-32 px-6 bg-linear-to-b from-white to-blue-50">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <ScrollAnimationWrapper animation="fade-up">
           <div className="text-center mb-16">
-            <p className="text-blue-500 text-sm font-semibold tracking-[0.25em] uppercase mb-4">
+            <p className="text-blue-600 text-sm font-bold tracking-[0.25em] uppercase mb-4">
               Get In Touch
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Let’s Start a Conversation
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Let's Start a Conversation
             </h2>
-            <p className="text-gray-400 max-w-3xl mx-auto">
+            <p className="text-gray-600 max-w-3xl mx-auto">
               Have a project in mind? Send us a message and we’ll get back to you shortly.
             </p>
           </div>
@@ -65,22 +65,22 @@ export default function HomeContact() {
               <div className="space-y-8">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
-                      <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-12 h-12 rounded-lg bg-blue-100 border border-blue-200 flex items-center justify-center hover-scale">
+                      <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" d={info.icon} />
                       </svg>
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold">{info.title}</h4>
+                      <h4 className="text-gray-900 font-bold">{info.title}</h4>
                       {info.title === "Email" ? (
                         <a
                           href="mailto:hr@briskodetechnology.com"
-                          className="text-gray-400 text-sm hover:text-blue-500"
+                          className="text-gray-600 text-sm hover:text-blue-600 transition-colors"
                         >
                           hr@briskodetechnology.com
                         </a>
                       ) : (
-                        <p className="text-gray-400 text-sm">{info.value}</p>
+                        <p className="text-gray-600 text-sm">{info.value}</p>
                       )}
                     </div>
                   </div>
@@ -89,7 +89,7 @@ export default function HomeContact() {
 
               {/* Social Icons */}
               <div className="mt-12 pt-8 border-t border-zinc-800">
-                <h4 className="text-white font-semibold mb-4">Follow Us</h4>
+                <h4 className="text-gray-900 font-bold mb-4">Follow Us</h4>
                 <div className="flex gap-4">
                   <SocialIcon to="https://www.linkedin.com/company/flyingdata-technology/posts/">
                     <FaLinkedinIn />
@@ -129,20 +129,20 @@ export default function HomeContact() {
                 </div>
 
                 <div>
-                  <label className="block text-sm text-gray-400 mb-2">Message *</label>
+                  <label className="block text-sm text-gray-700 font-semibold mb-2">Message *</label>
                   <textarea
                     name="message"
                     rows="6"
                     required
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-zinc-900/50 border border-zinc-800 rounded-lg text-white focus:border-blue-500/50"
+                    className="w-full px-4 py-3 glass-light border border-blue-200 rounded-lg text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
                     placeholder="Tell us about your project..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-semibold"
+                  className="btn-primary hover-lift"
                 >
                   Send Message
                 </button>
@@ -160,14 +160,14 @@ export default function HomeContact() {
 function Input({ label, type = "text", name, value, onChange }) {
   return (
     <div>
-      <label className="block text-sm text-gray-400 mb-2">{label} *</label>
+      <label className="block text-sm text-gray-700 font-semibold mb-2">{label} *</label>
       <input
         type={type}
         name={name}
         value={value}
         required
         onChange={onChange}
-        className="w-full px-4 py-3 bg-zinc-900/50 border border-zinc-800 rounded-lg text-white focus:border-blue-500/50"
+        className="w-full px-4 py-3 glass-light border border-blue-200 rounded-lg text-gray-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
       />
     </div>
   );
@@ -178,7 +178,7 @@ function SocialIcon({ to, children }) {
     <Link
       to={to}
       target="_blank"
-      className="w-10 h-10 flex items-center justify-center rounded-lg bg-zinc-900 border border-zinc-800 text-gray-400 hover:text-blue-500 hover:border-blue-500/40"
+      className="w-10 h-10 flex items-center justify-center rounded-lg glass-light border border-blue-200 text-gray-700 hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-all hover-scale"
     >
       {children}
     </Link>

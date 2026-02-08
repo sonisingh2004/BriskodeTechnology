@@ -39,11 +39,11 @@ export default function HomeAbout() {
   ];
 
   return (
-    <section className="relative py-20 md:py-22 px-6 overflow-hidden bg-[#010a24]">
+    <section className="relative py-20 md:py-22 px-6 overflow-hidden bg-linear-to-b from-white to-blue-50">
       <div className="max-w-7xl mx-auto relative z-10 ">
         {/* Section Label */}
         <ScrollAnimationWrapper animation="slide-left">
-          <p className="text-blue-500 text-sm md:text-2xl font-semibold tracking-[0.2em] uppercase mb-8">
+          <p className="text-blue-600 text-sm md:text-2xl font-bold tracking-[0.2em] uppercase mb-8">
           |OUR STORY
           </p>
         </ScrollAnimationWrapper>
@@ -146,11 +146,11 @@ function AnimatedHeading() {
       style={{ perspective: '1000px' }}
     >
       <span className="word-span inline-block text-gradient-blue">Your Vision.</span>{' '}
-      <span className="word-span inline-block text-white">Our Expertise.</span>
+      <span className="word-span inline-block text-gray-900">Our Expertise.</span>
       <br />
       <span className="word-span inline-block text-gradient-blue">Your Success.</span>
       <br />
-      <span className="word-span inline-block text-white">Leads That Dominate.</span>
+      <span className="word-span inline-block text-gray-900">Leads That Dominate.</span>
     </h2>
   );
 }
@@ -200,7 +200,7 @@ function AnimatedParagraphs() {
   }, [hasAnimated]);
 
   return (
-    <div ref={paragraphsRef} className="space-y-5 text-gray-400 text-base md:text-lg leading-relaxed">
+    <div ref={paragraphsRef} className="space-y-5 text-gray-700 text-base md:text-lg leading-relaxed">
       <p className="animated-paragraph">
         At Briskode Technology Pvt. Ltd., we are a team of passionate innovators and 
         technology enthusiasts dedicated to crafting cutting-edge IT solutions that drive 
@@ -262,16 +262,29 @@ function StatCard({ stat, index }) {
     }, duration / steps);
   };
 
+  const gradientColors = [
+    'from-blue-500 to-blue-400',
+    'from-purple-500 to-purple-400',
+    'from-cyan-500 to-cyan-400',
+    'from-orange-500 to-orange-400'
+  ];
+
   return (
     <div
       ref={cardRef}
-      className="group"
+      className="glass-card rounded-2xl p-6 md:p-8 text-center hover-lift group border border-blue-100 relative overflow-hidden"
     >
-      <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gradient-blue mb-2 transition-all duration-300">
-        {count}{stat.suffix}
-      </div>
-      <div className="text-gray-500 text-sm md:text-base font-medium uppercase tracking-wider">
-        {stat.label}
+      {/* Background Gradient Effect */}
+      <div className="absolute inset-0 bg-linear-to-br from-blue-50/50 to-purple-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      
+      <div className="relative z-10">
+        <div className="text-4xl md:text-5xl lg:text-6xl font-extrabold gradient-text mb-3 group-hover:scale-110 transition-transform duration-300">
+          {count}{stat.suffix}
+        </div>
+        <div className="text-xs md:text-sm text-gray-600 font-bold uppercase tracking-wider mb-4">
+          {stat.label}
+        </div>
+        <div className={`w-16 h-1 bg-linear-to-r ${gradientColors[index]} rounded-full mx-auto`}></div>
       </div>
     </div>
   );

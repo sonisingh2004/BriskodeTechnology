@@ -5,20 +5,20 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed left-0 w-full z-90 pointer-events-none bg-[#010a2460]">
-      <nav className="max-w-7xl mx-auto px-4 md:px-10 lg:px-10 py-4 md:py-5 pointer-events-auto ">
+    <header className="fixed left-0 w-full z-90 pointer-events-none glass-strong shadow-elegant">
+      <nav className="max-w-7xl mx-auto px-4 md:px-10 lg:px-10 py-4 md:py-5 pointer-events-auto">
 
         <div className="flex items-center justify-between">
           
           {/* Logo */}
-          <div className="text-white text-xl font-bold tracking-wide pointer-events-auto">
+          <div className="text-gray-800 text-xl font-bold tracking-wide pointer-events-auto hover-scale">
             <Link to="/">
-              <img src='/assets/logo.png' alt="Briskode Logo" className="h-8 md:h-10"/>
+              <img src='/assets/logo.png' alt="Briskode Logo" className="h-8 md:h-10 transition-transform duration-300 hover:scale-110"/>
             </Link>
           </div>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center gap-8 text-white/80 text-sm font-medium">
+          <ul className="hidden md:flex items-center gap-8 text-gray-700 text-sm font-semibold">
   {[
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
@@ -32,14 +32,15 @@ export default function Navbar() {
       <NavLink
   to={item.path}
   className={({ isActive }) =>
-    `relative transition-colors duration-300
+    `relative transition-all duration-300 animated-underline
      ${
        isActive
-         ? "text-blue-500 after:w-full"
-         : "hover:text-white after:w-0"
+         ? "text-blue-600 font-bold after:w-full"
+         : "hover:text-blue-500 after:w-0"
      }
      after:absolute after:-bottom-1 after:left-0 after:h-0.5
-     after:bg-blue-500 after:transition-all after:duration-300`
+     after:bg-gradient-to-r after:from-blue-500 after:to-blue-400 
+     after:transition-all after:duration-300`
   }
 >
   {item.name}
@@ -53,7 +54,7 @@ export default function Navbar() {
           {/* Hamburger Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-white p-2 hover:bg-white/10 rounded transition-colors pointer-events-auto fixed right-4 z-110"
+            className="md:hidden text-gray-800 p-2 hover:bg-blue-50 rounded-lg transition-all duration-300 pointer-events-auto fixed right-4 z-110 hover-scale"
             aria-label="Toggle menu"
           >
             <svg
@@ -84,27 +85,27 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 bg-black/90 backdrop-blur-md rounded-lg p-6 animate-fadeIn relative z-105">
-            <ul className="flex flex-col gap-4 text-white/90 text-base font-medium">
-              <li className="hover:text-white transition-colors cursor-pointer py-2 border-b border-white/10">
+          <div className="md:hidden mt-4 glass-card rounded-xl p-6 animate-scale-in relative z-105">
+            <ul className="flex flex-col gap-4 text-gray-700 text-base font-semibold">
+              <li className="hover:text-blue-600 transition-all duration-300 cursor-pointer py-2 border-b border-blue-100 hover:border-blue-300">
                 <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
               </li>
-              <li className="hover:text-white transition-colors cursor-pointer py-2 border-b border-white/10">
+              <li className="hover:text-blue-600 transition-all duration-300 cursor-pointer py-2 border-b border-blue-100 hover:border-blue-300">
                 <Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link>
               </li>
-              <li className="hover:text-white transition-colors cursor-pointer py-2 border-b border-white/10">
+              <li className="hover:text-blue-600 transition-all duration-300 cursor-pointer py-2 border-b border-blue-100 hover:border-blue-300">
                 <Link to="/services" onClick={() => setIsMenuOpen(false)}>Services</Link>
               </li>
-              <li className="hover:text-white transition-colors cursor-pointer py-2 border-b border-white/10">
+              <li className="hover:text-blue-600 transition-all duration-300 cursor-pointer py-2 border-b border-blue-100 hover:border-blue-300">
                 <Link to="/gallery" onClick={() => setIsMenuOpen(false)}>Gallery</Link>
               </li>
-              <li className="hover:text-white transition-colors cursor-pointer py-2 border-b border-white/10">
+              <li className="hover:text-blue-600 transition-all duration-300 cursor-pointer py-2 border-b border-blue-100 hover:border-blue-300">
                 <Link to="/portfolio" onClick={() => setIsMenuOpen(false)}>Portfolio</Link>
               </li>
-              <li className="hover:text-white transition-colors cursor-pointer py-2 border-b border-white/10">
+              <li className="hover:text-blue-600 transition-all duration-300 cursor-pointer py-2 border-b border-blue-100 hover:border-blue-300">
                 <Link to="/internship" onClick={() => setIsMenuOpen(false)}>Internship</Link>
               </li>
-              <li className="hover:text-white transition-colors cursor-pointer py-2">
+              <li className="hover:text-blue-600 transition-all duration-300 cursor-pointer py-2">
                 <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
               </li>
             </ul>
