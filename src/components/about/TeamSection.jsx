@@ -28,17 +28,23 @@ export default function TeamSection() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 px-6 bg-black">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative py-20 md:py-32 px-6 bg-linear-to-b from-purple-50 to-blue-50">
+      {/* Animated background blobs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute w-96 h-96 bg-blue-200/30 rounded-full blur-3xl top-20 left-10 animate-float"></div>
+        <div className="absolute w-96 h-96 bg-purple-200/25 rounded-full blur-3xl bottom-20 right-10 animate-float" style={{ animationDelay: '2s' }}></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <ScrollAnimationWrapper animation="fade-up">
           <div className="text-center mb-16">
-            <p className="text-blue-500 text-sm md:text-base font-semibold tracking-[0.2em] uppercase mb-4">
+            <p className="text-blue-600 text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-4">
               Meet Our Team
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              The Minds Behind <span className="text-gradient-blue">Briskode</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
+              The Minds Behind <span className="gradient-text">Briskode</span>
             </h2>
-            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+            <p className="text-gray-700 text-lg max-w-3xl mx-auto">
               Our diverse team of experts brings together decades of experience and a passion for excellence.
             </p>
           </div>
@@ -96,7 +102,7 @@ function TeamMember({ member, index }) {
         ref={cardRef}
         className="group cursor-pointer"
       >
-        <div className="relative overflow-hidden rounded-2xl mb-4">
+        <div className="relative overflow-hidden rounded-2xl mb-4 border-2 border-blue-200 hover:border-blue-400 transition-colors duration-500">
           <div className="team-image relative aspect-square">
             <img
               src={member.image}
@@ -107,11 +113,10 @@ function TeamMember({ member, index }) {
           </div>
         </div>
         
-        <h3 className="text-xl font-bold text-white mb-1 group-hover:text-gradient-blue transition-all duration-300">
+        <h3 className="text-xl font-extrabold text-gray-900 mb-1 group-hover:text-blue-600 transition-all duration-300">
           {member.name}
         </h3>
-        <p className="text-blue-400 text-sm font-medium mb-2">{member.role}</p>
-        <p className="text-gray-400 text-sm">{member.bio}</p>
+        <p className="text-blue-600 text-sm font-bold mb-2">{member.role}</p>
       </div>
     </ScrollAnimationWrapper>
   );

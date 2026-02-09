@@ -8,7 +8,7 @@ import TechnologyStackSection from '../components/service/TechnologyStackSection
 
 export default function Service() {
   return (
-    <div className="bg-[#00061A] min-h-screen">
+    <div className="bg-gradient-to-b from-white via-blue-50 to-white min-h-screen">
       <HeroSection />
       <ServicesGridSection />
       <ProcessSection />

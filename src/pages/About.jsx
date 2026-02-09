@@ -9,7 +9,7 @@ import WhyChooseUsSection from '../components/about/WhyChooseUsSection';
 
 export default function About() {
   return (
-    <div className="bg-[#00061A] min-h-screen">
+    <div className="bg-gradient-to-b from-white via-blue-50 to-white min-h-screen">
       <HeroSection />
       <StorySection />
       <MissionVisionSection />

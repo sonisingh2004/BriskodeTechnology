@@ -162,17 +162,23 @@ export default function ServicesGridSection() {
   const activeServices = servicesByCategory[activeCategory];
 
   return (
-    <section className="relative py-20 md:py-32 px-6 bg-[#00061A]">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative py-20 md:py-32 px-6 bg-linear-to-b from-white to-blue-50">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute w-96 h-96 bg-blue-200/30 rounded-full blur-3xl top-32 left-20 animate-float"></div>
+        <div className="absolute w-96 h-96 bg-purple-200/25 rounded-full blur-3xl bottom-32 right-20 animate-float" style={{ animationDelay: '2s' }}></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <ScrollAnimationWrapper animation="fade-up">
           <div className="text-center mb-16">
-            <p className="text-blue-500 text-sm md:text-base font-semibold tracking-[0.2em] uppercase mb-4">
+            <p className="text-blue-600 text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-4">
               What We Offer
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Our <span className="text-gradient-blue">Services</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
+              Our <span className="gradient-text">Services</span>
             </h2>
-            <p className="text-gray-400 text-lg max-w-3xl mx-auto mb-12">
+            <p className="text-gray-700 text-lg max-w-3xl mx-auto mb-12">
               Comprehensive technology solutions designed to accelerate your business growth.
             </p>
           </div>
@@ -185,10 +191,10 @@ export default function ServicesGridSection() {
               <button
                 key={index}
                 onClick={() => setActiveCategory(category.name)}
-                className={`group px-6 py-3 rounded-full font-semibold text-sm md:text-base transition-all duration-300 flex items-center gap-2 ${
+                className={`group px-6 py-3 rounded-full font-bold text-sm md:text-base transition-all duration-300 flex items-center gap-2 hover-lift ${
                   activeCategory === category.name
                     ? 'bg-linear-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/30'
-                    : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white border border-white/10'
+                    : 'glass-card border-blue-200 text-gray-700 hover:border-blue-400 hover:text-blue-600'
                 }`}
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -261,36 +267,36 @@ function ServiceCard({ service, index }) {
     <ScrollAnimationWrapper animation="fade-up" delay={index * 50}>
       <div
         ref={cardRef}
-        className="relative p-8 rounded-2xl bg-linear-to-br from-white/5 to-transparent border border-white/10 hover:border-blue-500/30 transition-all duration-500 group cursor-pointer overflow-hidden"
+        className="relative p-8 rounded-2xl glass-card border border-blue-200 hover:border-blue-400 transition-all duration-500 group cursor-pointer overflow-hidden hover-lift"
       >
         {/* Hover glow effect */}
-        <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute top-0 right-0 w-32 h-32 bg-blue-200/40 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         
         <div className="relative z-10">
           {/* Icon */}
           <div
             ref={iconRef}
-            className="w-16 h-16 mb-6 rounded-xl bg-linear-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center"
+            className="w-16 h-16 mb-6 rounded-xl bg-linear-to-br from-blue-100 to-purple-100 flex items-center justify-center border-2 border-blue-200 group-hover:border-blue-400 transition-colors duration-300"
           >
-            <svg className="w-8 h-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={service.iconPath} />
             </svg>
           </div>
           
           {/* Title */}
-          <h3 className="text-xl md:text-2xl font-bold text-white mb-4 group-hover:text-gradient-blue transition-all duration-300">
+          <h3 className="text-xl md:text-2xl font-extrabold text-gray-900 mb-4 group-hover:text-blue-600 transition-all duration-300">
             {service.title}
           </h3>
           
           {/* Description */}
-          <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-6">
+          <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-6">
             {service.description}
           </p>
           
           {/* Features */}
           <div className="space-y-2">
             {service.features.map((feature, idx) => (
-              <div key={idx} className="flex items-center text-xs md:text-sm text-gray-500">
+              <div key={idx} className="flex items-center text-xs md:text-sm text-gray-600 font-medium">
                 <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-3"></div>
                 <span>{feature}</span>
               </div>

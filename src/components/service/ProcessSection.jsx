@@ -44,17 +44,23 @@ export default function ProcessSection() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 px-6 bg-black">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative py-20 md:py-32 px-6 bg-linear-to-b from-white to-purple-50">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute w-96 h-96 bg-blue-200/30 rounded-full blur-3xl top-20 left-10 animate-float"></div>
+        <div className="absolute w-96 h-96 bg-purple-200/25 rounded-full blur-3xl bottom-20 right-10 animate-float" style={{ animationDelay: '2s' }}></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <ScrollAnimationWrapper animation="fade-up">
           <div className="text-center mb-16">
-            <p className="text-blue-500 text-sm md:text-base font-semibold tracking-[0.2em] uppercase mb-4">
+            <p className="text-blue-600 text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-4">
               Our Process
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              How We <span className="text-gradient-blue">Work</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
+              How We <span className="gradient-text">Work</span>
             </h2>
-            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+            <p className="text-gray-700 text-lg max-w-3xl mx-auto">
               A proven methodology that delivers exceptional results every time.
             </p>
           </div>
@@ -108,22 +114,22 @@ function ProcessStep({ step, index }) {
     <ScrollAnimationWrapper animation="fade-up" delay={index * 50}>
       <div ref={stepRef} className="relative group cursor-default">
         {/* Number Badge */}
-        <div className="absolute -top-4 -left-4 w-16 h-16 rounded-full bg-linear-to-br from-blue-500 to-purple-500 flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-all duration-300">
-          <span className="text-white font-bold text-lg">{step.number}</span>
+        <div className="absolute -top-4 -left-4 w-16 h-16 rounded-full bg-linear-to-br from-blue-500 to-purple-500 flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-all duration-300 animate-float" style={{ animationDelay: `${index * 0.5}s` }}>
+          <span className="text-white font-extrabold text-lg">{step.number}</span>
         </div>
 
-        <div className="relative p-8 pt-12 rounded-2xl bg-linear-to-br from-white/5 to-transparent border border-white/10 group-hover:border-blue-500/30 transition-all duration-500 overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="relative p-8 pt-12 rounded-2xl glass-card border border-blue-200 group-hover:border-blue-400 transition-all duration-500 overflow-hidden hover-lift">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-blue-200/40 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           
           <div className="relative z-10">
-            <div className="step-icon w-12 h-12 mb-6 rounded-lg bg-blue-500/10 flex items-center justify-center">
-              <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="step-icon w-12 h-12 mb-6 rounded-lg bg-blue-100 border-2 border-blue-200 flex items-center justify-center group-hover:border-blue-400 transition-colors duration-300">
+              <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={step.icon} />
               </svg>
             </div>
             
-            <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">{step.description}</p>
+            <h3 className="text-xl md:text-2xl font-extrabold text-gray-900 mb-4 group-hover:text-blue-600 transition-all duration-300">{step.title}</h3>
+            <p className="text-gray-700 text-sm md:text-base leading-relaxed">{step.description}</p>
           </div>
         </div>
       </div>

@@ -39,7 +39,7 @@ export default function Navbar() {
          : "hover:text-blue-500 after:w-0"
      }
      after:absolute after:-bottom-1 after:left-0 after:h-0.5
-     after:bg-gradient-to-r after:from-blue-500 after:to-blue-400 
+     after:bg-linear-to-r after:from-blue-500 after:to-blue-400 
      after:transition-all after:duration-300`
   }
 >
@@ -106,7 +106,7 @@ export default function Navbar() {
                 <Link to="/internship" onClick={() => setIsMenuOpen(false)}>Internship</Link>
               </li>
               <li className="hover:text-blue-600 transition-all duration-300 cursor-pointer py-2">
-                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
               </li>
             </ul>
           </div>

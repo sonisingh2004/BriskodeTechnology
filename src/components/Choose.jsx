@@ -134,7 +134,7 @@ function ReasonCard({ reason }) {
       </p>
 
       {/* Bottom line accent */}
-      <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-500"></div>
+      <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-linear-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-500"></div>
     </div>
   );
 }

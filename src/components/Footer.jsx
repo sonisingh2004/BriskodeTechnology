@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="relative px-6 py-20 border-t border-blue-100 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-slate-50">
+    <footer className="relative px-6 py-20 border-t border-blue-100 overflow-hidden bg-linear-to-br from-blue-50 via-white to-slate-50">
       {/* Background gradient */}
       <div className="absolute inset-0 gradient-mesh opacity-50"></div>
 
@@ -113,7 +113,7 @@ export default function Footer() {
               aria-label="INSTAGRAM"
               className="w-10 h-10 flex items-center justify-center rounded-lg
               border border-blue-200 text-gray-600
-              hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-pink-500
+              hover:text-white hover:bg-linear-to-r hover:from-purple-500 hover:to-pink-500 hover:border-pink-500
               transition-all duration-300 hover-scale"
             >
               <FaInstagram className="text-lg"/>

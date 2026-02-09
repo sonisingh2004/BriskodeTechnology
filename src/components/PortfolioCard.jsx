@@ -34,11 +34,7 @@ const PortfolioCard = ({ title, image, link }) => {
 
       {/* Overlay */}
       <div className="absolute inset-0 flex flex-col justify-end p-5
-<<<<<<< HEAD
         bg-linear-to-t from-black/90 via-black/40 to-transparent
-=======
-        bg-gradient-to-t from-black/90 via-black/40 to-transparent
->>>>>>> 6e41899918ad06a66bb421649177829325451d6d
         opacity-0 group-hover:opacity-100 transition-opacity duration-500">
 
         <span className="mb-2 w-fit rounded-full bg-blue-600/90 px-3 py-1 text-xs font-semibold text-white">

@@ -38,29 +38,29 @@ export default function ValuesSection() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 px-6 bg-[#00061A]">
+    <section className="relative py-20 md:py-32 px-6 bg-gradient-to-b from-white to-purple-50">
       {/* Professional grid pattern */}
-      <div className="absolute inset-0 opacity-3">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-size-[80px_80px]"></div>
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.15)_1px,transparent_1px)] bg-size-[80px_80px]"></div>
       </div>
       
       {/* Elegant floating elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-32 left-1/4 w-28 h-28 border border-blue-500/15 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-32 right-1/3 w-20 h-20 bg-linear-to-br from-purple-500/8 to-cyan-500/8 rotate-45 animate-bounce" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 right-16 w-14 h-14 border-2 border-cyan-500/20 rounded-lg animate-pulse" style={{ animationDelay: '2.5s' }}></div>
+        <div className="absolute top-32 left-1/4 w-28 h-28 border-2 border-blue-300/50 rounded-full animate-float"></div>
+        <div className="absolute bottom-32 right-1/3 w-20 h-20 bg-gradient-to-br from-purple-200/40 to-cyan-200/40 rotate-45 animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 right-16 w-14 h-14 border-2 border-cyan-300/60 rounded-lg animate-float" style={{ animationDelay: '2.5s' }}></div>
       </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         <ScrollAnimationWrapper animation="fade-up">
           <div className="text-center mb-16">
-            <p className="text-blue-500 text-sm md:text-base font-semibold tracking-[0.2em] uppercase mb-4">
+            <p className="text-blue-600 text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-4">
               Our Core Values
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              What We <span className="text-gradient-blue">Stand For</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
+              What We <span className="gradient-text">Stand For</span>
             </h2>
-            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+            <p className="text-gray-700 text-lg max-w-3xl mx-auto">
               These principles guide everything we do and define who we are as a company.
             </p>
           </div>
@@ -114,21 +114,21 @@ function ValueCard({ value, index }) {
     <ScrollAnimationWrapper animation="fade-up" delay={index * 50}>
       <div
         ref={cardRef}
-        className="relative p-8 rounded-2xl bg-linear-to-br from-white/5 to-transparent border border-white/10 hover:border-blue-500/30 transition-all duration-500 group cursor-default overflow-hidden"
+        className="relative p-8 rounded-2xl glass-card border border-blue-200 hover:border-blue-400 transition-all duration-500 group cursor-default overflow-hidden hover-lift"
       >
-        <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute top-0 right-0 w-32 h-32 bg-blue-200/40 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         
         <div className="relative z-10">
-          <div className="value-icon w-14 h-14 mb-6 rounded-xl bg-linear-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
-            <svg className="w-7 h-7 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="value-icon w-14 h-14 mb-6 rounded-xl bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center border-2 border-blue-200">
+            <svg className="w-7 h-7 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={value.icon} />
             </svg>
           </div>
           
-          <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-gradient-blue transition-all duration-300">
+          <h3 className="text-xl md:text-2xl font-extrabold text-gray-900 mb-3 group-hover:text-blue-600 transition-all duration-300">
             {value.title}
           </h3>
-          <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+          <p className="text-gray-700 text-sm md:text-base leading-relaxed">
             {value.description}
           </p>
         </div>

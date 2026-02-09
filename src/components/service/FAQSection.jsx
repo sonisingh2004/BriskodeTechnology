@@ -26,17 +26,23 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 px-6 bg-[#00061A]">
-      <div className="max-w-4xl mx-auto">
+    <section className="relative py-20 md:py-32 px-6 bg-linear-to-b from-blue-50 to-white">
+      {/* Floating elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute w-72 h-72 bg-blue-200/30 rounded-full blur-3xl top-32 left-1/4 animate-float"></div>
+        <div className="absolute w-72 h-72 bg-purple-200/25 rounded-full blur-3xl bottom-32 right-1/4 animate-float" style={{ animationDelay: '3s' }}></div>
+      </div>
+      
+      <div className="max-w-4xl mx-auto relative z-10">
         <ScrollAnimationWrapper animation="fade-up">
           <div className="text-center mb-16">
-            <p className="text-blue-500 text-sm md:text-base font-semibold tracking-[0.2em] uppercase mb-4">
+            <p className="text-blue-600 text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-4">
               FAQ
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Frequently Asked <span className="text-gradient-blue">Questions</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
+              Frequently Asked <span className="gradient-text">Questions</span>
             </h2>
-            <p className="text-gray-400 text-lg">
+            <p className="text-gray-700 text-lg">
               Everything you need to know about our services.
             </p>
           </div>
@@ -83,16 +89,16 @@ function FAQItem({ faq, index, isOpen, onClick }) {
 
   return (
     <ScrollAnimationWrapper animation="fade-up" delay={index * 50}>
-      <div className="border border-white/10 rounded-xl overflow-hidden hover:border-blue-500/30 transition-all duration-300">
+      <div className="glass-card border border-blue-200 rounded-xl overflow-hidden hover:border-blue-400 hover-lift transition-all duration-300">
         <button
           onClick={onClick}
           className="w-full p-6 flex items-center justify-between text-left group"
         >
-          <h3 className="text-lg font-semibold text-white group-hover:text-gradient-blue transition-all duration-300 pr-4">
+          <h3 className="text-lg font-extrabold text-gray-900 group-hover:text-blue-600 transition-all duration-300 pr-4">
             {faq.question}
           </h3>
           <svg
-            className={`w-6 h-6 text-blue-400 shrink-0 transition-transform duration-300 ${
+            className={`w-6 h-6 text-blue-600 shrink-0 transition-transform duration-300 ${
               isOpen ? 'rotate-180' : ''
             }`}
             fill="none"
@@ -107,7 +113,7 @@ function FAQItem({ faq, index, isOpen, onClick }) {
           className="overflow-hidden"
           style={{ height: 0, opacity: 0 }}
         >
-          <div className="px-6 pb-6 text-gray-400 leading-relaxed">
+          <div className="px-6 pb-6 text-gray-700 leading-relaxed font-medium">
             {faq.answer}
           </div>
         </div>
