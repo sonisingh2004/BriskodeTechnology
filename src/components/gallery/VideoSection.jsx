@@ -48,7 +48,7 @@ export default function VideoSection() {
   };
 
   return (
-    <section className="relative py-20 md:py-32 px-6 bg-gradient-to-b from-purple-50 to-white">
+    <section className="relative py-20 md:py-32 px-6 bg-linear-to-b from-purple-50 to-white">
       {/* Animated background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute w-72 h-72 bg-blue-200/30 rounded-full blur-3xl top-32 left-1/4 animate-float"></div>
@@ -69,7 +69,7 @@ export default function VideoSection() {
             </p>
             {videoError && (
               <p className="text-red-600 text-sm mt-4 font-medium">
-                Video failed to load. Please check the video file.
+              Video failed to load. Please check the video file.
               </p>
             )}
           </div>

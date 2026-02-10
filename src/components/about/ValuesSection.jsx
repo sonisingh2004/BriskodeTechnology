@@ -38,7 +38,7 @@ export default function ValuesSection() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 px-6 bg-gradient-to-b from-white to-purple-50">
+    <section className="relative py-20 md:py-32 px-6 bg-linear-to-b from-white to-purple-50">
       {/* Professional grid pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.15)_1px,transparent_1px)] bg-size-[80px_80px]"></div>
@@ -47,7 +47,7 @@ export default function ValuesSection() {
       {/* Elegant floating elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-32 left-1/4 w-28 h-28 border-2 border-blue-300/50 rounded-full animate-float"></div>
-        <div className="absolute bottom-32 right-1/3 w-20 h-20 bg-gradient-to-br from-purple-200/40 to-cyan-200/40 rotate-45 animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-32 right-1/3 w-20 h-20 bg-linear-to-br from-purple-200/40 to-cyan-200/40 rotate-45 animate-float" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/2 right-16 w-14 h-14 border-2 border-cyan-300/60 rounded-lg animate-float" style={{ animationDelay: '2.5s' }}></div>
       </div>
       
@@ -119,7 +119,7 @@ function ValueCard({ value, index }) {
         <div className="absolute top-0 right-0 w-32 h-32 bg-blue-200/40 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         
         <div className="relative z-10">
-          <div className="value-icon w-14 h-14 mb-6 rounded-xl bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center border-2 border-blue-200">
+          <div className="value-icon w-14 h-14 mb-6 rounded-xl bg-linear-to-br from-blue-100 to-purple-100 flex items-center justify-center border-2 border-blue-200">
             <svg className="w-7 h-7 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={value.icon} />
             </svg>
@@ -129,7 +129,7 @@ function ValueCard({ value, index }) {
             {value.title}
           </h3>
           <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-            {value.description}
+          {value.description}
           </p>
         </div>
       </div>

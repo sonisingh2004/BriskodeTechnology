@@ -29,12 +29,12 @@ const PricingCard = ({ title, price, duration }) => {
       }`}
     >
       {/* Background glow */}
-      <div className={`absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
+      <div className={`absolute inset-0 bg-linear-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
         isFullStack ? 'from-purple-50/70 via-pink-50/50 to-cyan-50/50' : 'from-blue-50/50 via-purple-50/50 to-cyan-50/50'
       }`}></div>
       
       {/* Shimmer effect */}
-      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-linear-to-r from-transparent via-white/30 to-transparent"></div>
 
       <div className="relative z-10">
         <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
@@ -42,7 +42,7 @@ const PricingCard = ({ title, price, duration }) => {
         <div className="my-6">
           <motion.p
             whileHover={{ scale: 1.1 }}
-            className="text-5xl font-extrabold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent"
+            className="text-5xl font-extrabold bg-linear-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent"
           >
             {price}
           </motion.p>
@@ -60,7 +60,7 @@ const PricingCard = ({ title, price, duration }) => {
               viewport={{ once: true }}
               className="flex items-center gap-3"
             >
-              <div className="w-5 h-5 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center flex-shrink-0">
+              <div className="w-5 h-5 rounded-full bg-linear-to-r from-blue-500 to-purple-500 flex items-center justify-center shrink-0">
                 <FaCheck className="text-white text-xs" />
               </div>
               <span className="text-sm text-gray-700">{feature}</span>

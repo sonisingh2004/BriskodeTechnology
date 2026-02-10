@@ -2,7 +2,7 @@ import ScrollAnimationWrapper from '../ScrollAnimationWrapper';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center px-6 py-32 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <section className="relative min-h-[70vh] flex items-center justify-center px-6 py-32 overflow-hidden bg-linear-to-br from-blue-50 via-white to-purple-50">
       {/* Video Background */}
       <div className="absolute inset-0 overflow-hidden">
         <video
@@ -14,7 +14,7 @@ export default function HeroSection() {
         >
           <source src="/assets/video.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/95 via-white/90 to-purple-50/95"></div>
+        <div className="absolute inset-0 bg-linear-to-br from-blue-50/95 via-white/90 to-purple-50/95"></div>
       </div>
       
       {/* Professional background pattern */}

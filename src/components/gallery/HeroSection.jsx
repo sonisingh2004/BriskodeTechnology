@@ -2,7 +2,7 @@ import ScrollAnimationWrapper from '../ScrollAnimationWrapper';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center px-6 py-32 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <section className="relative min-h-[70vh] flex items-center justify-center px-6 py-32 overflow-hidden bg-linear-to-br from-blue-50 via-white to-purple-50">
       {/* Professional background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(59,130,246,0.4)_1px,transparent_0)] bg-size-[50px_50px]"></div>
@@ -49,7 +49,7 @@ export default function HeroSection() {
 
         <ScrollAnimationWrapper animation="fade-up" delay={200}>
           <p className="text-gray-700 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-medium">
-            A glimpse into our journey, our team, and the amazing moments we've shared together 
+           A glimpse into our journey, our team, and the amazing moments we've shared together 
             while building innovative solutions.
           </p>
         </ScrollAnimationWrapper>

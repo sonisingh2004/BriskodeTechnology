@@ -2,7 +2,7 @@ import ScrollAnimationWrapper from '../ScrollAnimationWrapper';
 
 export default function CTASection() {
   return (
-    <section className="relative py-20 md:py-32 px-6 bg-gradient-to-br from-blue-50 via-purple-50 to-blue-50 overflow-hidden">
+    <section className="relative py-20 md:py-32 px-6 bg-linear-to-br from-blue-50 via-purple-50 to-blue-50 overflow-hidden">
       {/* Professional mesh pattern */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_3px_3px,rgba(59,130,246,0.4)_2px,transparent_0)] bg-size-[70px_70px]"></div>
@@ -39,8 +39,7 @@ export default function CTASection() {
             </a>
             <a
               href="/about"
-              className="btn-secondary"
-            >
+              className="btn-secondary"           >
               Learn More
             </a>
           </div>

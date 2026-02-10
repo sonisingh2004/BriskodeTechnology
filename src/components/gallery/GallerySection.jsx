@@ -66,7 +66,7 @@ export default function GallerySection() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 px-6 bg-gradient-to-b from-white to-blue-50">
+    <section className="relative py-20 md:py-32 px-6 bg-linear-to-b from-white to-blue-50">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute w-96 h-96 bg-blue-200/30 rounded-full blur-3xl top-32 left-20 animate-float"></div>
@@ -176,7 +176,7 @@ function GalleryItem({ image, index, onClick }) {
         />
         
         {/* Overlay */}
-        <div className="gallery-overlay absolute inset-0 bg-gradient-to-t from-blue-600/90 via-blue-600/40 to-transparent opacity-0 flex flex-col justify-end p-6 transition-opacity duration-300">
+        <div className="gallery-overlay absolute inset-0 bg-linear-to-t from-blue-600/90 via-blue-600/40 to-transparent opacity-0 flex flex-col justify-end p-6 transition-opacity duration-300">
           <span className="text-xs text-blue-100 font-bold uppercase tracking-wider mb-2">
             {image.category}
           </span>

@@ -21,13 +21,14 @@ const PortfolioCard = ({ title, image, link }) => {
       className="group relative rounded-2xl overflow-hidden
         border-2 border-gray-200 bg-white shadow-lg
         hover:border-blue-400 hover:shadow-2xl
-        transition-all duration-500"
+        transition-all duration-500 cursor-pointer"
+      onClick={() => window.open(link, '_blank')}
     >
       {/* Shimmer effect */}
-      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent z-20 pointer-events-none"></div>
+      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-linear-to-r from-transparent via-white/20 to-transparent z-20 pointer-events-none"></div>
 
       {/* Corner accent */}
-      <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-500/0 via-blue-500/5 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-bl-[100px]"></div>
+      <div className="absolute top-0 right-0 w-20 h-20 bg-linear-to-br from-blue-500/0 via-blue-500/5 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-bl-[100px]"></div>
 
       {/* Image */}
       <div className="overflow-hidden relative">
@@ -37,12 +38,12 @@ const PortfolioCard = ({ title, image, link }) => {
           className="h-56 w-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
         />
         {/* Image overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       </div>
 
       {/* Overlay */}
       <div className="absolute inset-0 flex flex-col justify-end p-5
-        bg-gradient-to-t from-blue-600/95 via-blue-500/70 to-transparent
+        bg-linear-to-t from-blue-600/95 via-blue-500/70 to-transparent
         opacity-0 group-hover:opacity-100 transition-all duration-500">
 
         <motion.span
@@ -77,10 +78,10 @@ const PortfolioCard = ({ title, image, link }) => {
       </div>
     
       {/* bottom glow line */}
-      <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 transition-all duration-700 group-hover:w-full shadow-lg shadow-blue-500/50"></div>
+      <div className="absolute bottom-0 left-0 h-1 w-0 bg-linear-to-r from-blue-600 via-purple-600 to-cyan-600 transition-all duration-700 group-hover:w-full shadow-lg shadow-blue-500/50"></div>
       
       {/* Pulse ring on hover */}
-      <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500"></div>
+      <div className="absolute -inset-1 bg-linear-to-r from-blue-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500"></div>
     </motion.div>
   );
 };

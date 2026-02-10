@@ -4,6 +4,12 @@ import PortfolioCard from "../components/PortfolioCard";
 import PortfolioCTA from "../components/PortfolioCTA";
 
 const portfolioData = [
+    {
+    title: "Buguda NAC",
+    image: "/assets/partner/image.jpg",
+    link: "https://amabuguda.com/",
+    category: "Govt",
+  },
   {
     title: "Mudrasathi",
     image: "/assets/partner/Mudrasathi-work.png",

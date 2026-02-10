@@ -38,7 +38,7 @@ export default function TeamCultureSection() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 px-6 bg-gradient-to-b from-blue-50 to-purple-50">
+    <section className="relative py-20 md:py-32 px-6 bg-linear-to-b from-blue-50 to-purple-50">
       {/* Professional grid pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.15)_1px,transparent_1px)] bg-size-[80px_80px]"></div>
@@ -112,7 +112,7 @@ function CultureCard({ culture, index }) {
         <div className="absolute top-0 right-0 w-32 h-32 bg-blue-200/40 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         
         <div className="relative z-10">
-          <div className="culture-icon w-14 h-14 mb-6 rounded-xl bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center border-2 border-blue-200 group-hover:border-blue-400 transition-colors duration-300">
+          <div className="culture-icon w-14 h-14 mb-6 rounded-xl bg-linear-to-br from-blue-100 to-purple-100 flex items-center justify-center border-2 border-blue-200 group-hover:border-blue-400 transition-colors duration-300">
             <svg className="w-7 h-7 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={culture.icon} />
             </svg>
@@ -121,8 +121,7 @@ function CultureCard({ culture, index }) {
           <h3 className="text-xl font-extrabold text-gray-900 mb-3 group-hover:text-blue-600 transition-all duration-300">
             {culture.title}
           </h3>
-          <p className="text-gray-700 text-sm leading-relaxed font-medium">
-            {culture.description}
+          <p className="text-gray-700 text-sm leading-relaxed font-medium">            {culture.description}
           </p>
         </div>
       </div>

@@ -7,7 +7,7 @@ const PortfolioCTA = () => {
     <section className="relative mt-32">
       {/* Mesh pattern background */}
       <div className="absolute inset-0 opacity-[0.03]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(59,130,246,0.8)_1px,transparent_0)] bg-[length:48px_48px]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(59,130,246,0.8)_1px,transparent_0)] bg-size[48px_48px]"></div>
       </div>
 
       <motion.div
@@ -38,8 +38,7 @@ const PortfolioCTA = () => {
 
           <Link
             to="/services"
-            className="btn-secondary"
-          >
+            className="btn-secondary"         >
             View Services
           </Link>
         </div>
