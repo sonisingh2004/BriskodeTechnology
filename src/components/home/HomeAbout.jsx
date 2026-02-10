@@ -6,7 +6,7 @@ import ScrollAnimationWrapper from '../ScrollAnimationWrapper';
 export default function HomeAbout() {
   const stats = [
     { value: 50, label: 'Projects', suffix: '+' },
-    { value: 100, label: 'Happy Clients', suffix: '+' },
+    { value: 45, label: 'Happy Clients', suffix: '+' },
     { value: 2, label: 'Years Experience', suffix: '+' },
     { value: 10, label: 'Awards', suffix: '+' }
   ];
@@ -220,15 +220,33 @@ function AnimatedParagraphs() {
 
 function StatCard({ stat, index }) {
   const [count, setCount] = useState(0);
-  const [hasAnimated, setHasAnimated] = useState(false);
   const cardRef = useRef(null);
+  const hasAnimatedRef = useRef(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          setHasAnimated(true);
-          animateCount();
+        // Only animate once when scrolled into view
+        if (entry.isIntersecting && !hasAnimatedRef.current) {
+          hasAnimatedRef.current = true;
+          
+          // Small delay based on index for stagger effect
+          const delayTimer = setTimeout(() => {
+            const duration = 2000;
+            const steps = 60;
+            const increment = stat.value / steps;
+            let current = 0;
+
+            const intervalTimer = setInterval(() => {
+              current += increment;
+              if (current >= stat.value) {
+                setCount(stat.value);
+                clearInterval(intervalTimer);
+              } else {
+                setCount(Math.floor(current));
+              }
+            }, duration / steps);
+          }, index * 100);
         }
       },
       { threshold: 0.3 }
@@ -243,24 +261,7 @@ function StatCard({ stat, index }) {
         observer.unobserve(cardRef.current);
       }
     };
-  }, [hasAnimated]);
-
-  const animateCount = () => {
-    const duration = 2000;
-    const steps = 60;
-    const increment = stat.value / steps;
-    let current = 0;
-
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= stat.value) {
-        setCount(stat.value);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(current));
-      }
-    }, duration / steps);
-  };
+  }, []);
 
   const gradientColors = [
     'from-blue-500 to-blue-400',

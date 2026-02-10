@@ -5,9 +5,9 @@ import ScrollAnimationWrapper from '../ScrollAnimationWrapper';
 export default function StorySection() {
   const stats = [
     { value: 50, label: 'Projects Completed', suffix: '+' },
-    { value: 100, label: 'Happy Clients', suffix: '+' },
+    { value: 45, label: 'Happy Clients', suffix: '+' },
     { value: 2, label: 'Years of Excellence', suffix: '+' },
-    { value: 15, label: 'Team Members', suffix: '' }
+    { value: 10, label: 'Awards', suffix: '+' }
   ];
 
   const storyImages = [
@@ -76,8 +76,8 @@ export default function StorySection() {
           {/* Left: Content */}
           <div>
             <ScrollAnimationWrapper animation="slide-left">
-              <p className="text-blue-600 text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-6">
-                Our Story
+              <p className="text-blue-600 text-sm md:text-2xl font-bold tracking-[0.2em] uppercase mb-6">
+                | Our Story
               </p>
             </ScrollAnimationWrapper>
 

@@ -18,8 +18,8 @@ export default function MissionVisionSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         <ScrollAnimationWrapper animation="fade-up">
           <div className="text-center mb-16">
-            <p className="text-blue-600 text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-4">
-              What Drives Us
+            <p className="text-blue-600 text-sm md:text-2xl font-bold tracking-[0.2em] uppercase mb-4">
+              | What Drives Us
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900">
               Mission & Vision

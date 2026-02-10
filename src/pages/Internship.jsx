@@ -75,7 +75,7 @@ const Internship = () => {
               className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
             >
               {[
-                { icon: FaUsers, value: "500+", label: "Interns Trained" },
+                { icon: FaUsers, value: "100+", label: "Interns Trained" },
                 { icon: FaCertificate, value: "100%", label: "Certification" },
                 { icon: FaBriefcase, value: "85%", label: "Placement Rate" },
                 { icon: FaCode, value: "10+", label: "Live Projects" }

@@ -28,13 +28,6 @@ const PricingCard = ({ title, price, duration }) => {
         isFullStack ? 'border-purple-300 hover:border-purple-500' : 'border-blue-200 hover:border-blue-400'
       }`}
     >
-      {/* Bestseller Badge */}
-      {isFullStack && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-orange-500 to-pink-500 text-white text-xs font-bold px-4 py-1 rounded-full shadow-lg z-20">
-          MOST POPULAR
-        </div>
-      )}
-      
       {/* Background glow */}
       <div className={`absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
         isFullStack ? 'from-purple-50/70 via-pink-50/50 to-cyan-50/50' : 'from-blue-50/50 via-purple-50/50 to-cyan-50/50'

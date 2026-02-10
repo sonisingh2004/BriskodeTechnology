@@ -67,7 +67,7 @@ export default function Clients() {
         <ScrollAnimationWrapper animation="fade-up">
           <div className="text-center mb-16 md:mb-20">
             <p className="text-blue-600 text-sm md:text-2xl font-bold tracking-[0.2em] uppercase mb-4">
-              OUR CLIENTS
+            | OUR CLIENTS
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
               Trusted by Industry Leaders
@@ -112,25 +112,6 @@ function ClientCard({ client }) {
             className="w-full h-full object-contain p-2 group-hover:scale-110 transition-transform duration-300"
           />
         </div>
-      </div>
-
-
-
-      {/* Hover Effect - Arrow */}
-      <div className="absolute top-4 right-4 w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:bg-blue-500">
-        <svg 
-          className="w-3 h-3 text-blue-600 group-hover:text-white transition-colors" 
-          fill="none" 
-          stroke="currentColor" 
-          viewBox="0 0 24 24"
-        >
-          <path 
-            strokeLinecap="round" 
-            strokeLinejoin="round" 
-            strokeWidth={2} 
-            d="M9 5l7 7-7 7" 
-          />
-        </svg>
       </div>
     </div>
   );

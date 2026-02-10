@@ -47,7 +47,7 @@ export default function HomeContact() {
         <ScrollAnimationWrapper animation="fade-up">
           <div className="text-center mb-16">
             <p className="text-blue-600 text-sm md:text-2xl font-bold tracking-[0.25em] uppercase mb-4">
-              Get In Touch
+            | Get In Touch
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Let's Start a Conversation

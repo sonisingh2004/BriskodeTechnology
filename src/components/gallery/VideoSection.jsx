@@ -58,8 +58,8 @@ export default function VideoSection() {
       <div className="max-w-6xl mx-auto relative z-10">
         <ScrollAnimationWrapper animation="fade-up">
           <div className="text-center mb-16">
-            <p className="text-blue-600 text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-4">
-              Behind The Scenes
+            <p className="text-blue-600 text-sm md:text-2xl font-bold tracking-[0.2em] uppercase mb-4">
+              | Behind The Scenes
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
               A Day at <span className="gradient-text">Briskode</span>

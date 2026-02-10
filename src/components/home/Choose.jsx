@@ -44,7 +44,7 @@ export default function Choose() {
         <ScrollAnimationWrapper animation="fade-up">
           <div className="text-center mb-16 md:mb-20">
             <p className="text-blue-600 text-sm md:text-2xl font-bold tracking-[0.2em] uppercase mb-4">
-              WHY CHOOSE US
+            | WHY CHOOSE US
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
               Your Success is Our Priority
