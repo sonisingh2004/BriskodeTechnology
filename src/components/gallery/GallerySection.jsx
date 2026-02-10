@@ -66,17 +66,23 @@ export default function GallerySection() {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 px-6 bg-[#00061A]">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative py-20 md:py-32 px-6 bg-gradient-to-b from-white to-blue-50">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute w-96 h-96 bg-blue-200/30 rounded-full blur-3xl top-32 left-20 animate-float"></div>
+        <div className="absolute w-96 h-96 bg-purple-200/25 rounded-full blur-3xl bottom-32 right-20 animate-float" style={{ animationDelay: '2s' }}></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <ScrollAnimationWrapper animation="fade-up">
           <div className="text-center mb-16">
-            <p className="text-blue-500 text-sm md:text-base font-semibold tracking-[0.2em] uppercase mb-4">
+            <p className="text-blue-600 text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-4">
               Our Moments
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Life at <span className="text-gradient-blue">Briskode</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
+              Life at <span className="gradient-text">Briskode</span>
             </h2>
-            <p className="text-gray-400 text-lg max-w-3xl mx-auto mb-12">
+            <p className="text-gray-700 text-lg max-w-3xl mx-auto mb-12">
               From collaborative work sessions to fun celebrations, explore the moments that define our culture.
             </p>
           </div>
@@ -161,7 +167,7 @@ function GalleryItem({ image, index, onClick }) {
       <div
         ref={itemRef}
         onClick={onClick}
-        className="relative group cursor-pointer rounded-2xl overflow-hidden aspect-square"
+        className="relative group cursor-pointer rounded-2xl overflow-hidden aspect-square border-4 border-white shadow-lg hover:shadow-2xl transition-all duration-500 hover-lift"
       >
         <img
           src={image.url}
@@ -170,15 +176,15 @@ function GalleryItem({ image, index, onClick }) {
         />
         
         {/* Overlay */}
-        <div className="gallery-overlay absolute inset-0 bg-linear-to-t from-black via-black/60 to-transparent opacity-0 flex flex-col justify-end p-6 transition-opacity duration-300">
-          <span className="text-xs text-blue-400 font-semibold uppercase tracking-wider mb-2">
+        <div className="gallery-overlay absolute inset-0 bg-gradient-to-t from-blue-600/90 via-blue-600/40 to-transparent opacity-0 flex flex-col justify-end p-6 transition-opacity duration-300">
+          <span className="text-xs text-blue-100 font-bold uppercase tracking-wider mb-2">
             {image.category}
           </span>
           <h3 className="text-xl font-bold text-white mb-2">{image.title}</h3>
-          <p className="text-gray-300 text-sm">{image.description}</p>
+          <p className="text-blue-50 text-sm font-medium">{image.description}</p>
           
           {/* Zoom Icon */}
-          <div className="absolute top-4 right-4 w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
+          <div className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white/40">
             <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
             </svg>

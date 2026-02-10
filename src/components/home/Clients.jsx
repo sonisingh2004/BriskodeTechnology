@@ -4,6 +4,20 @@ import ScrollAnimationWrapper from '../ScrollAnimationWrapper';
 export default function Clients() {
   const clients = [
     {
+      logo:"/assets/partner/image.jpg"
+    },
+    {
+    
+      logo: "/assets/ganjam nac.jpeg",
+    },
+    {
+      
+      logo: "/assets/gopalpur nac.jpg",
+    },
+    {
+      logo:"/assets/odisha govt.jpeg"
+    },
+    {
       logo: "/assets/advocate.jpg",
     },
     {
@@ -24,14 +38,6 @@ export default function Clients() {
       logo: "/assets/farm enterprise.png",
     },
     {
-    
-      logo: "/assets/ganjam nac.jpeg",
-    },
-    {
-      
-      logo: "/assets/gopalpur nac.jpg",
-    },
-    {
       logo:"/assets/jjkm.jpeg"
     },
     {
@@ -39,9 +45,6 @@ export default function Clients() {
     },
     {
       logo:"/assets/nexgenfx.png"
-    },
-    {
-      logo:"/assets/odisha govt.jpeg"
     },
     {
       logo:"/assets/sj classes.png"
@@ -63,7 +66,7 @@ export default function Clients() {
         {/* Section Header */}
         <ScrollAnimationWrapper animation="fade-up">
           <div className="text-center mb-16 md:mb-20">
-            <p className="text-blue-600 text-xs md:text-sm font-bold tracking-[0.2em] uppercase mb-4">
+            <p className="text-blue-600 text-sm md:text-2xl font-bold tracking-[0.2em] uppercase mb-4">
               OUR CLIENTS
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">

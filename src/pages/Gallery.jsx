@@ -7,7 +7,7 @@ import VideoSection from '../components/gallery/VideoSection';
 
 export default function Gallery() {
   return (
-    <div className="bg-[#00061A] min-h-screen">
+    <div className="bg-gradient-to-b from-white via-blue-50 to-white min-h-screen">
       <HeroSection />
       <GallerySection />
       <TeamCultureSection />

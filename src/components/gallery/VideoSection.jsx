@@ -48,21 +48,27 @@ export default function VideoSection() {
   };
 
   return (
-    <section className="relative py-20 md:py-32 px-6 bg-[#00061A]">
-      <div className="max-w-6xl mx-auto">
+    <section className="relative py-20 md:py-32 px-6 bg-gradient-to-b from-purple-50 to-white">
+      {/* Animated background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute w-72 h-72 bg-blue-200/30 rounded-full blur-3xl top-32 left-1/4 animate-float"></div>
+        <div className="absolute w-72 h-72 bg-purple-200/25 rounded-full blur-3xl bottom-32 right-1/4 animate-float" style={{ animationDelay: '3s' }}></div>
+      </div>
+      
+      <div className="max-w-6xl mx-auto relative z-10">
         <ScrollAnimationWrapper animation="fade-up">
           <div className="text-center mb-16">
-            <p className="text-blue-500 text-sm md:text-base font-semibold tracking-[0.2em] uppercase mb-4">
+            <p className="text-blue-600 text-sm md:text-base font-bold tracking-[0.2em] uppercase mb-4">
               Behind The Scenes
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              A Day at <span className="text-gradient-blue">Briskode</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
+              A Day at <span className="gradient-text">Briskode</span>
             </h2>
-            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+            <p className="text-gray-700 text-lg max-w-3xl mx-auto">
               Experience the energy, passion, and creativity that drives our team every single day.
             </p>
             {videoError && (
-              <p className="text-red-400 text-sm mt-4">
+              <p className="text-red-600 text-sm mt-4 font-medium">
                 Video failed to load. Please check the video file.
               </p>
             )}
