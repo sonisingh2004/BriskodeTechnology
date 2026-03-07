@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ScrollAnimationWrapper from '../ScrollAnimationWrapper';
 
 export default function CTASection() {
@@ -32,18 +33,18 @@ export default function CTASection() {
 
         <ScrollAnimationWrapper animation="fade-up" delay={200}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="px-8 py-4 bg-linear-to-r from-blue-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
             >
               Get Started Today
-            </a>
-            <a
-              href="/services"
+            </Link>
+            <Link
+              to="/services"
               className="px-8 py-4 border border-white/20 rounded-full text-white font-semibold hover:bg-white/5 transition-all duration-300"
             >
               Explore Services
-            </a>
+            </Link>
           </div>
         </ScrollAnimationWrapper>
       </div>
