@@ -9,45 +9,45 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 md:px-10 lg:px-10 py-4 md:py-5 pointer-events-auto ">
 
         <div className="flex items-center justify-between">
-          
+
           {/* Logo */}
           <div className="text-white text-xl font-bold tracking-wide pointer-events-auto">
             <Link to="/">
-              <img src='/assets/logo.png' alt="Briskode Logo" className="h-8 md:h-10"/>
+              <img src='/assets/logo.png' alt="Briskode Logo" className="h-8 md:h-10" />
             </Link>
           </div>
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex items-center gap-8 text-white/80 text-sm font-medium">
-  {[
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "Gallery", path: "/gallery" },
-    { name: "Portfolio", path: "/portfolio" },
-    { name: "Internship", path: "/internship" },
-    { name: "Contact", path: "/contact" },
-  ].map((item) => (
-    <li key={item.name}>
-      <NavLink
-  to={item.path}
-  className={({ isActive }) =>
-    `relative transition-colors duration-300
-     ${
-       isActive
-         ? "text-blue-500 after:w-full"
-         : "hover:text-white after:w-0"
-     }
+            {[
+              { name: "Home", path: "/" },
+              { name: "About", path: "/about" },
+              { name: "Services", path: "/services" },
+              { name: "Gallery", path: "/gallery" },
+              { name: "Portfolio", path: "/portfolio" },
+              { name: "Internship", path: "/internship" },
+              { name: "Awards", path: "/awards" },
+              { name: "Contact", path: "/contact" },
+            ].map((item) => (
+              <li key={item.name}>
+                <NavLink
+                  to={item.path}
+                  className={({ isActive }) =>
+                    `relative transition-colors duration-300
+     ${isActive
+                      ? "text-blue-500 after:w-full"
+                      : "hover:text-white after:w-0"
+                    }
      after:absolute after:-bottom-1 after:left-0 after:h-0.5
      after:bg-blue-500 after:transition-all after:duration-300`
-  }
->
-  {item.name}
-</NavLink>
+                  }
+                >
+                  {item.name}
+                </NavLink>
 
-    </li>
-  ))}
-</ul>
+              </li>
+            ))}
+          </ul>
 
 
           {/* Hamburger Button */}
@@ -103,6 +103,9 @@ export default function Navbar() {
               </li>
               <li className="hover:text-white transition-colors cursor-pointer py-2 border-b border-white/10">
                 <Link to="/internship" onClick={() => setIsMenuOpen(false)}>Internship</Link>
+              </li>
+              <li className="hover:text-white transition-colors cursor-pointer py-2 border-b border-white/10">
+                <Link to="/awards" onClick={() => setIsMenuOpen(false)}>Awards</Link>
               </li>
               <li className="hover:text-white transition-colors cursor-pointer py-2">
                 <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>

@@ -8,6 +8,7 @@ import Portfolio from '../pages/Portfolio'
 import Internship from '../pages/Internship'
 import Contact from '../pages/Contact'
 import ThankYou from '../pages/ThankYou'
+import Awards from '../pages/Awards'
 
 
 export default function AppRoutes() {
@@ -22,6 +23,7 @@ export default function AppRoutes() {
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="internship" element={<Internship/>} />
         <Route path='contact' element={<Contact/>}/>
+        <Route path="/awards" element={<Awards />} />
         <Route path="/thank-you" element={<ThankYou />} />
       </Route>
 

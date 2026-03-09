@@ -206,7 +206,7 @@ body {
 }
 
 .animate-scroll-left {
-  animation: scroll-left 8s linear infinite;
+  animation: scroll-left 30s linear infinite;
 }
 
 .pause-animation:hover {

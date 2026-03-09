@@ -30,7 +30,7 @@ export default function HomeContact() {
     {
       icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
       title: "Email",
-      value: "hr@briskodetechnology.com",
+      value: "briskodetechnology@gmail.com",
     },
     {
       icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z",
@@ -73,12 +73,12 @@ export default function HomeContact() {
                     <div>
                       <h4 className="text-white font-semibold">{info.title}</h4>
                       {info.title === "Email" ? (
-                        <a
-                          href="mailto:hr@briskodetechnology.com"
+                        <Link
+                          to="mailto:briskodetechnology@gmail.com"
                           className="text-gray-400 text-sm hover:text-blue-500"
                         >
-                          hr@briskodetechnology.com
-                        </a>
+                          briskodetechnology@gmail.com
+                        </Link>
                       ) : (
                         <p className="text-gray-400 text-sm">{info.value}</p>
                       )}
@@ -109,15 +109,15 @@ export default function HomeContact() {
           <div className="lg:col-span-2">
             <ScrollAnimationWrapper animation="fade-up" delay={200}>
               <form
-                action="https://formsubmit.co/hr@briskodetechnology.com"
+                action="https://formsubmit.co/briskodetechnology@gmail.com"
                 method="POST"
                 className="space-y-6"
               >
                 {/* FormSubmit config */}
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_subject" value="New Contact Form Submission" />
-                <input type="hidden" name="_next" value="https://www.briskodetechnology.com/thank-you" />
-
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_next" value={`${window.location.origin}/thank-you`} />
                 <div className="grid md:grid-cols-2 gap-6">
                   <Input label="Full Name" name="name" value={formData.name} onChange={handleChange} />
                   <Input label="Email Address" type="email" name="email" value={formData.email} onChange={handleChange} />

@@ -5,6 +5,12 @@ import PortfolioCTA from "../components/PortfolioCTA";
 
 const portfolioData = [
   {
+    title: "AmaBuguda",
+    image: "/assets/partner/amabuguda.png",
+    link: "https://www.amabuguda.com/",
+    category: "Govt",
+  },
+  {
     title: "Mudrasathi",
     image: "/assets/partner/Mudrasathi-work.png",
     link: "https://www.mudrasathi.com/",

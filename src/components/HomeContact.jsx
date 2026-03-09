@@ -117,7 +117,7 @@ export default function HomeContact() {
                 {/* FormSubmit config */}
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_subject" value="New Contact Form Submission" />
-                <input type="hidden" name="_next" value="https://www.briskodetechnology.com/thank-you" />
+                <input type="hidden" name="_next" value={`${window.location.origin}/thank-you`} />
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <Input label="Full Name" name="name" value={formData.name} onChange={handleChange} />
