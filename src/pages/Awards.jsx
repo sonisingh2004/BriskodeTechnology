@@ -16,6 +16,14 @@ export default function Awards() {
       title: "Startup Odisha Certificate",
       image: "/assets/awards/award3.jpg",
     },
+    {
+      title: "Certificate from Gopalpur NAC",
+      image: "/assets/awards/award4.jpg",
+    },
+    {
+      title: "Certificate from Ganjam NAC",
+      image: "/assets/awards/award5.jpg",
+    },
   ];
 
   return (

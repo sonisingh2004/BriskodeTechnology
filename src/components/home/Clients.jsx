@@ -7,14 +7,18 @@ export default function Clients() {
       logo: "/assets/partner/amabuguda.png",
     },
     {
+      logo: "/assets/gopalpur nac.jpg",
+    },
+    {
+      logo: "/assets/ganjamnac.jpeg",
+    },
+    {
       logo: "/assets/advocate.jpg",
     },
     {
-
       logo: "/assets/archify & buildify.png",
     },
     {
-
       logo: "/assets/asish enterprises.jpg",
     },
     {
@@ -25,14 +29,6 @@ export default function Clients() {
     },
     {
       logo: "/assets/farm enterprise.png",
-    },
-    {
-
-      logo: "/assets/ganjamnac.jpeg",
-    },
-    {
-
-      logo: "/assets/gopalpur nac.jpg",
     },
     {
       logo: "/assets/jjkm.jpeg"

@@ -125,7 +125,15 @@ export default function HomeContact() {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
-                  <Input label="Phone Number" name="phone" value={formData.phone} onChange={handleChange} />
+                  <Input 
+                    label="Phone Number" 
+                    type="tel" 
+                    name="phone" 
+                    pattern="[0-9]{10}"
+                    title="Please enter a valid 10-digit phone number"
+                    value={formData.phone} 
+                    onChange={handleChange} 
+                  />
                   <Input label="Subject" name="subject" value={formData.subject} onChange={handleChange} />
                 </div>
 
@@ -156,9 +164,7 @@ export default function HomeContact() {
   );
 }
 
-/* ---------- Helpers ---------- */
-
-function Input({ label, type = "text", name, value, onChange }) {
+function Input({ label, type = "text", name, value, onChange, pattern, title }) {
   return (
     <div>
       <label className="block text-sm text-gray-400 mb-2">{label} *</label>
@@ -167,6 +173,8 @@ function Input({ label, type = "text", name, value, onChange }) {
         name={name}
         value={value}
         required
+        pattern={pattern}
+        title={title}
         onChange={onChange}
         className="w-full px-4 py-3 bg-zinc-900/50 border border-zinc-800 rounded-lg text-white focus:border-blue-500/50"
       />
