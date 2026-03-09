@@ -85,7 +85,7 @@ function TechnologyCard({ tech, index }) {
         className="relative p-6 rounded-xl bg-linear-to-br from-white/5 to-transparent border border-white/10 hover:border-blue-500/30 transition-all duration-300 cursor-pointer text-center group"
       >
         <div className="absolute inset-0 bg-linear-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
-        
+
         <div className="relative z-10">
           <h3 className="text-lg font-bold text-white mb-1">{tech.name}</h3>
           <p className="text-xs text-gray-500">{tech.category}</p>

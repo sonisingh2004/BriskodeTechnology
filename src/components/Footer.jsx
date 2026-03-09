@@ -22,8 +22,8 @@ export default function Footer() {
             </p>
             <div className="text-gray-400 text-sm">
               <p className="font-semibold text-blue-500 mb-2">ADDRESS</p>
-              <p>Near Care Hospital, Chandrasekharpur,</p>
-              <p>Bhubaneswar, Odisha 751001</p>
+              <p>Plot no 222, District Center, Chandrasekharpur,</p>
+              <p>Bhubaneswar, Odisha 751016</p>
             </div>
           </div>
 

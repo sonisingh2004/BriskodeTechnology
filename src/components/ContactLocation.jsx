@@ -21,7 +21,7 @@ export default function ContactLocation() {
             Visit Our <span className="text-blue-500">Office</span>
           </h2>
           <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-            We are located at Chandrasekharpur, Bhubaneswar. Feel free to visit us
+            We are located at Plot no 222, District Center, Chandrasekharpur, Bhubaneswar. Feel free to visit us
             or reach out anytime.
           </p>
         </motion.div>
