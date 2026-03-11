@@ -25,17 +25,18 @@ export default function TeamSection() {
       category: "Leadership",
       image: "/assets/hr.jpg",
     },
-    {
-      name: "Sameer Kumar Sahu",
-      role: "Developer",
-      category: "Developer",
-      image: "/assets/fd.jpeg",
-    },
+   
     {
       name: "Biswajit Majhi",
-      role: "Marketing",
-      category: "Marketing",
+      role: "Head of Finance",
+      category: "Finance",
       image: "/assets/biswajitmajhi.jpg",
+    },
+     {
+      name: "Rupali sahoo",
+      role: "Finance",
+      category: "Finance",
+      image: "/assets/finance1.jpeg",
     },
     {
       name: "Asish Kumar Pattnaik",
@@ -93,10 +94,35 @@ export default function TeamSection() {
       image: "/assets/debashisintern.jpeg",
     },
     {
-      name: "Rupali sahoo",
-      role: "Finance",
-      category: "Finance",
-      image: "/assets/finance1.jpeg",
+      name: "Sagar Pradhan",
+      role: "Intern",
+      category: "Intern",
+      image: "/assets/sagarintern.jpeg",
+    },
+    {
+      name: "Biranchi Ghadei",
+      role: "Intern",
+      category: "Intern",
+      image: "/assets/biranchiintern.jpeg",
+    },
+    {
+      name: "Abhisek Singh",
+      role: "Intern",
+      category: "Intern",
+      image: "/assets/abhisekintern.jpeg",
+    },
+    {
+      name: "Abhilash Mohanta",
+      role: "Intern",
+      category: "Intern",
+      image: "/assets/abhilasintern.jpeg",
+    },
+    
+     {
+      name: "Sameer Kumar Sahu",
+      role: "Developer",
+      category: "Developer",
+      image: "/assets/fd.jpeg",
     },
   ];
 
