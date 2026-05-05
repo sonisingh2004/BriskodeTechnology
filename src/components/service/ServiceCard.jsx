@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
 import ScrollAnimationWrapper from '../ScrollAnimationWrapper';
 
-export default function ServiceCard({ service, index }) {
+export default function ServiceCard({ service, index, id }) {
   const cardRef = useRef(null);
   const iconRef = useRef(null);
 
@@ -52,6 +52,7 @@ export default function ServiceCard({ service, index }) {
   return (
     <ScrollAnimationWrapper animation="fade-up" delay={index * 50}>
       <div
+        id={id}
         ref={cardRef}
         className="relative p-8 rounded-2xl bg-linear-to-br from-white/5 to-transparent border border-white/10 hover:border-blue-500/30 transition-all duration-500 group cursor-pointer overflow-hidden"
       >

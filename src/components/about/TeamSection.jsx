@@ -71,8 +71,8 @@ export default function TeamSection() {
     },
     {
       name: "Puja Rani Das",
-      role: "Jr.Developer",
-      category: "Developer",
+      role: "Intern",
+      category: "Intern",
       image: "/assets/pujadev.jpeg",
     },
     {

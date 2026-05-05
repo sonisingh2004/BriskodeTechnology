@@ -1,8 +1,18 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { servicesByCategory } from "./service/servicesData";
+import { products } from "../data/productData";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showServicesDropdown, setShowServicesDropdown] = useState(false);
+
+  const serviceMenuSections = Object.entries(servicesByCategory);
+  const slugify = (value) =>
+    value
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)/g, "");
 
   return (
     <header className="fixed left-0 w-full z-90 pointer-events-none bg-[#010a2460]">
@@ -22,7 +32,6 @@ export default function Navbar() {
             {[
               { name: "Home", path: "/" },
               { name: "About", path: "/about" },
-              { name: "Services", path: "/services" },
               { name: "Gallery", path: "/gallery" },
               { name: "Portfolio", path: "/portfolio" },
               { name: "Internship", path: "/internship" },
@@ -44,9 +53,68 @@ export default function Navbar() {
                 >
                   {item.name}
                 </NavLink>
-
               </li>
             ))}
+
+            <li
+              className="relative"
+              onMouseEnter={() => setShowServicesDropdown(true)}
+              onMouseLeave={() => setShowServicesDropdown(false)}
+            >
+              <NavLink
+                to="/services"
+                className={({ isActive }) =>
+                  `relative transition-colors duration-300
+     ${isActive
+                      ? "text-blue-500 after:w-full"
+                      : "hover:text-white after:w-0"
+                    }
+     after:absolute after:-bottom-1 after:left-0 after:h-0.5
+     after:bg-blue-500 after:transition-all after:duration-300`
+                }
+              >
+                Services
+              </NavLink>
+
+              <div className={`absolute right-0 -translate-x-10 top-full mt-3 w-220 rounded-4xl border border-white/10 bg-slate-950/95 shadow-2xl shadow-black/40 transition-all duration-300 z-50 ${showServicesDropdown ? 'visible opacity-100 translate-y-0 pointer-events-auto' : 'invisible opacity-0 translate-y-3 pointer-events-none'}`}>
+                <div className="grid grid-cols-5 gap-4 p-5 text-sm text-white/90">
+                  {serviceMenuSections.map(([sectionTitle, items]) => (
+                    <div key={sectionTitle}>
+                      <p className="mb-4 text-white font-semibold">{sectionTitle}</p>
+                      <ul className="space-y-3">
+                        {items.map((item) => (
+                          <li key={item.title} className="flex items-start gap-3 hover:text-white transition-colors cursor-pointer">
+                            <span className="mt-1 text-blue-400">•</span>
+                            <Link to={`/services#${slugify(item.title)}`} className="block">
+                              {item.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </li>
+
+            <li className="relative group">
+              <button className="relative transition-colors duration-300 hover:text-white text-left text-white/80 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-blue-500 after:transition-all after:duration-300 group-hover:after:w-full">
+                Products
+              </button>
+
+              <div className="absolute right-0 top-full mt-3 w-160 rounded-4xl border border-white/10 bg-slate-950/95 shadow-2xl shadow-black/40 opacity-0 invisible translate-y-2 transition-all duration-300 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto z-50">
+                <ul className="grid grid-cols-3 gap-2 p-4 text-sm text-white/90">
+                  {products.map((product) => (
+                    <li key={product.slug} className="rounded-xl px-3 py-2 hover:bg-white/10 transition-colors cursor-pointer flex items-center gap-3">
+                      <span className="text-blue-400">•</span>
+                      <Link to={`/product/${product.slug}`} className="block">
+                        {product.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
           </ul>
 
 
@@ -106,6 +174,18 @@ export default function Navbar() {
               </li>
               <li className="hover:text-white transition-colors cursor-pointer py-2 border-b border-white/10">
                 <Link to="/awards" onClick={() => setIsMenuOpen(false)}>Awards</Link>
+              </li>
+              <li className="pt-4 pb-2 border-b border-white/10">
+                <p className="text-white text-base font-semibold">Products</p>
+                <ul className="mt-3 space-y-2 text-sm text-white/80 pl-3">
+                  {products.map((product) => (
+                    <li key={product.slug} className="hover:text-white transition-colors cursor-pointer py-1">
+                      <Link to={`/product/${product.slug}`} onClick={() => setIsMenuOpen(false)}>
+                        {product.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </li>
               <li className="hover:text-white transition-colors cursor-pointer py-2">
                 <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>

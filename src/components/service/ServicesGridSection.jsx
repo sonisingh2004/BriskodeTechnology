@@ -1,12 +1,31 @@
 // @ts-nocheck
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ScrollAnimationWrapper from '../ScrollAnimationWrapper';
 import CategoryTabs from './CategoryTabs';
 import ServiceCard from './ServiceCard';
 import { categories, servicesByCategory } from './servicesData';
 
-export default function ServicesGridSection() {
-  const [activeCategory, setActiveCategory] = useState('Development');
+const slugify = (value) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+
+export default function ServicesGridSection({ initialCategory = 'Development', scrollTarget }) {
+  const [activeCategory, setActiveCategory] = useState(initialCategory);
+
+  useEffect(() => {
+    setActiveCategory(initialCategory);
+  }, [initialCategory]);
+
+  useEffect(() => {
+    if (!scrollTarget) return;
+
+    const element = document.getElementById(scrollTarget);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [scrollTarget]);
 
   const activeServices = servicesByCategory[activeCategory];
 
@@ -39,7 +58,12 @@ export default function ServicesGridSection() {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {activeServices.map((service, index) => (
-            <ServiceCard key={`${activeCategory}-${index}`} service={service} index={index} />
+            <ServiceCard
+              key={`${activeCategory}-${index}`}
+              id={slugify(service.title)}
+              service={service}
+              index={index}
+            />
           ))}
         </div>
       </div>
