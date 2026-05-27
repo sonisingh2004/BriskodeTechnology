@@ -16,6 +16,12 @@ export default function Clients() {
       logo: "/assets/advocate.jpg",
     },
     {
+      logo: "/assets/partner/themirchimasala.png",
+    },
+    {
+      logo: "/assets/partner/sportyfi.png",
+    },
+    {
       logo: "/assets/archify & buildify.png",
     },
     {

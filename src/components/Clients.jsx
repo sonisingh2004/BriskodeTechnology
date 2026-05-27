@@ -51,6 +51,9 @@ export default function Clients() {
     },
     {
       logo:"/assets/trupti trucknbus.png"
+    },
+    {
+      logo:"/assets/themirchimasala.png"
     }
   ];
 

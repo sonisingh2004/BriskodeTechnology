@@ -88,6 +88,18 @@ const portfolioData = [
     link: "http://pattachitra.com",
     category: "Web",
   },
+  {
+    title: "The Mirchi Masala",
+    image: "/assets/partner/themirchimasala.png",
+    link: "http://themirchimasala.com",
+    category: "Web",
+  },
+  {
+    title: "SportyFi",
+    image: "/assets/partner/sportfy.png",
+    link: "https://sportyfi.info",
+    category: "Web",
+  }
 ];
 
 const filters = ["All", "Web", "Enterprise", "Govt"];

@@ -13,6 +13,7 @@ const clients = [
   "/assets/partner/partner-logo10.jpg",
   "/assets/partner/PB Associate.png",
   "/assets/partner/BHD.png",
+  "/assests/partner/themirchimasala.png",
 ];
 
 const ClientsSlider = () => {

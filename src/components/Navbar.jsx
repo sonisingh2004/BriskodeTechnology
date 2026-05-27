@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { servicesByCategory } from "./service/servicesData";
 import { products } from "../data/productData";
@@ -6,6 +6,40 @@ import { products } from "../data/productData";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showServicesDropdown, setShowServicesDropdown] = useState(false);
+  const [showProductsDropdown, setShowProductsDropdown] = useState(false);
+  const servicesHoverTimeout = useRef(null);
+  const productsHoverTimeout = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      clearTimeout(servicesHoverTimeout.current);
+      clearTimeout(productsHoverTimeout.current);
+    };
+  }, []);
+
+  const openServicesDropdown = () => {
+    clearTimeout(servicesHoverTimeout.current);
+    setShowServicesDropdown(true);
+  };
+
+  const closeServicesDropdown = () => {
+    clearTimeout(servicesHoverTimeout.current);
+    servicesHoverTimeout.current = window.setTimeout(() => {
+      setShowServicesDropdown(false);
+    }, 120);
+  };
+
+  const openProductsDropdown = () => {
+    clearTimeout(productsHoverTimeout.current);
+    setShowProductsDropdown(true);
+  };
+
+  const closeProductsDropdown = () => {
+    clearTimeout(productsHoverTimeout.current);
+    productsHoverTimeout.current = window.setTimeout(() => {
+      setShowProductsDropdown(false);
+    }, 120);
+  };
 
   const serviceMenuSections = Object.entries(servicesByCategory);
   const slugify = (value) =>
@@ -58,8 +92,8 @@ export default function Navbar() {
 
             <li
               className="relative"
-              onMouseEnter={() => setShowServicesDropdown(true)}
-              onMouseLeave={() => setShowServicesDropdown(false)}
+              onMouseEnter={openServicesDropdown}
+              onMouseLeave={closeServicesDropdown}
             >
               <NavLink
                 to="/services"
@@ -76,7 +110,11 @@ export default function Navbar() {
                 Services
               </NavLink>
 
-              <div className={`absolute right-0 -translate-x-10 top-full mt-3 w-220 rounded-4xl border border-white/10 bg-slate-950/95 shadow-2xl shadow-black/40 transition-all duration-300 z-50 ${showServicesDropdown ? 'visible opacity-100 translate-y-0 pointer-events-auto' : 'invisible opacity-0 translate-y-3 pointer-events-none'}`}>
+              <div
+                onMouseEnter={openServicesDropdown}
+                onMouseLeave={closeServicesDropdown}
+                className={`absolute right-0 -translate-x-10 top-full w-220 rounded-4xl border border-white/10 bg-slate-950/95 shadow-2xl shadow-black/40 transition-all duration-300 z-50 ${showServicesDropdown ? 'visible opacity-100 translate-y-0 pointer-events-auto' : 'invisible opacity-0 translate-y-1 pointer-events-none'}`}
+              >
                 <div className="grid grid-cols-5 gap-4 p-5 text-sm text-white/90">
                   {serviceMenuSections.map(([sectionTitle, items]) => (
                     <div key={sectionTitle}>
@@ -97,12 +135,20 @@ export default function Navbar() {
               </div>
             </li>
 
-            <li className="relative group">
-              <button className="relative transition-colors duration-300 hover:text-white text-left text-white/80 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-blue-500 after:transition-all after:duration-300 group-hover:after:w-full">
+            <li
+              className="relative"
+              onMouseEnter={openProductsDropdown}
+              onMouseLeave={closeProductsDropdown}
+            >
+              <button className="relative transition-colors duration-300 hover:text-white text-left text-white/80 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full">
                 Products
               </button>
 
-              <div className="absolute right-0 top-full mt-3 w-160 rounded-4xl border border-white/10 bg-slate-950/95 shadow-2xl shadow-black/40 opacity-0 invisible translate-y-2 transition-all duration-300 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto z-50">
+              <div
+                onMouseEnter={openProductsDropdown}
+                onMouseLeave={closeProductsDropdown}
+                className={`absolute right-0 top-full w-160 rounded-4xl border border-white/10 bg-slate-950/95 shadow-2xl shadow-black/40 transition-all duration-300 z-50 ${showProductsDropdown ? 'visible opacity-100 translate-y-0 pointer-events-auto' : 'invisible opacity-0 translate-y-1 pointer-events-none'}`}
+              >
                 <ul className="grid grid-cols-3 gap-2 p-4 text-sm text-white/90">
                   {products.map((product) => (
                     <li key={product.slug} className="rounded-xl px-3 py-2 hover:bg-white/10 transition-colors cursor-pointer flex items-center gap-3">
