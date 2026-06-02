@@ -32,11 +32,23 @@ export default function TeamSection() {
       category: "Finance",
       image: "/assets/biswajitmajhi.jpg",
     },
+    {
+      name: "Chinmaya Kumar Padhi",
+      role: "Operation Manager",
+      category: "Finance",
+      image: "/assets/Chinmaya.jpeg",
+    },
      {
       name: "Rupali sahoo",
       role: "Finance",
       category: "Finance",
-      image: "/assets/finance1.jpeg",
+      image: "/assets/Rupali.jpeg",
+    },
+    {
+      name: "Sandipa Sharma",
+      role: "Finance",
+      category: "Finance",
+      image: "/assets/Sandipa.jpeg",
     },
     {
       name: "Asish Kumar Pattnaik",
@@ -116,6 +128,18 @@ export default function TeamSection() {
       role: "Intern",
       category: "Intern",
       image: "/assets/abhilasintern.jpeg",
+    },
+    {
+      name: "Anisha Dhal",
+      role: "Intern",
+      category: "Intern",
+      image: "/assets/Anisha.jpeg",
+    },
+    {
+      name: "Kumari Subhashree Das",
+      role: "Intern",
+      category: "Intern",
+      image: "/assets/Subhashree.jpeg",
     },
     
      {
