@@ -65,25 +65,44 @@ const Internship = () => {
               <InternshipCard
                 title="Web Developer Internship"
                 duration="3 Months"
-                fee="₹6,000 + ₹1,000 Reg Fee"
+                fee="₹6,000 (Payable in 2 Installments of ₹3,000 each)"
                 skills={[
                   "HTML",
                   "CSS",
                   "Bootstrap",
                   "JavaScript",
-                  "Python Basics",
                 ]}
               />
 
               <InternshipCard
-                title="Full Stack Developer Internship"
+                title="MERN Full Stack Developer Internship"
                 duration="6 Months"
-                fee="₹12,000 + ₹1,000 Reg Fee"
+                fee="₹12,000 (Payable in 2 Installments of ₹6,000 each)"
                 skills={[
-                  "React",
-                  "Node.js",
                   "MongoDB",
-                  "Express",
+                  "Express.js",
+                  "React.js",
+                  "Node.js",
+                  "REST APIs",
+                  "JWT Authentication",
+                  "Redux",
+                  "Git & GitHub",
+                  "Cloud Deployment",
+                ]}
+              />
+
+              <InternshipCard
+                title="Python Full Stack Developer Internship"
+                duration="6 Months"
+                fee="₹12,000 (Payable in 2 Installments of ₹6,000 each)"
+                skills={[
+                  "Python",
+                  "Django",
+                  "Flask",
+                  "React.js",
+                  "REST APIs",
+                  "MySQL",
+                  "Git & GitHub",
                   "Cloud Deployment",
                 ]}
               />
